@@ -185,6 +185,47 @@
       .principle p { margin-top: 6px; color: var(--ink-soft); }
       .about-intro { font-size: 1.12rem; margin-bottom: 10px; }
 
+      /* Services */
+      .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .service { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; }
+      .service h3 { font-size: 1.18rem; }
+      .service .price { margin-top: 8px; font-weight: 700; color: var(--accent-ink); font-size: 1.02rem; }
+      .service .desc { margin-top: 10px; color: var(--ink-soft); font-size: .98rem; }
+      a.service { text-decoration: none; color: inherit; }
+      a.service:hover { border-color: var(--accent); }
+      a.service .desc { color: var(--accent-ink); font-weight: 600; }
+      /* Price comparison chart */
+      .compare { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 28px; }
+      .compare h3 { font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 700; }
+      .compare .compare-intro { margin-top: 8px; color: var(--ink-soft); font-size: 1.02rem; max-width: 40em; }
+      .compare-rows { margin-top: 26px; display: grid; gap: 0; }
+      .compare-row { padding: 18px 0; border-bottom: 1px dashed var(--line); }
+      .compare-row:first-child { padding-top: 0; }
+      .compare-row:last-child { padding-bottom: 0; border-bottom: 0; }
+      .compare-row .svc-name { font-weight: 700; font-size: 1.02rem; margin-bottom: 10px; }
+      .bar-line { display: grid; grid-template-columns: 76px 1fr auto; gap: 12px; align-items: center; margin-top: 7px; }
+      .bar-who { font-size: .86rem; font-weight: 700; letter-spacing: .02em; }
+      .bar-line.emma-line .bar-who { color: var(--accent-ink); }
+      .bar-line.typ-line .bar-who { color: var(--ink-soft); }
+      .bar-track { height: 15px; border-radius: 999px; background: var(--line); overflow: hidden; }
+      .bar-fill { height: 100%; border-radius: 999px; }
+      .bar-fill.emma-fill { background: var(--gold); }
+      .bar-fill.typ-fill { background: #a7b1ba; }
+      @media (prefers-color-scheme: dark) { .bar-fill.typ-fill { background: #5f7488; } }
+      .bar-price { font-size: .94rem; font-weight: 700; white-space: nowrap; }
+      .bar-line.typ-line .bar-price { color: var(--ink-soft); font-weight: 600; }
+      .compare-note { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .84rem; color: var(--ink-soft); max-width: 62em; }
+      @media (max-width: 560px) {
+        .compare { padding: 22px 18px; }
+        .bar-line { grid-template-columns: 1fr auto; gap: 4px 10px; margin-top: 10px; }
+        .bar-track { grid-column: 1 / -1; }
+        .bar-price { text-align: right; }
+      }
+
+      .svc-rules { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 14px; padding: 22px 26px; }
+      .svc-rules p { font-size: 1.02rem; }
+      .svc-referral { margin-top: 16px; font-size: .9rem; color: var(--ink-soft); max-width: 62em; }
+
       /* FAQ */
       .faq-list { display: grid; gap: 12px; max-width: 820px; }
       details.faq { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
@@ -215,12 +256,14 @@
       @media (max-width: 860px) {
         .hero-grid, .paths, .about-grid { grid-template-columns: 1fr; }
         .steps { grid-template-columns: 1fr 1fr; }
+        .services { grid-template-columns: 1fr 1fr; }
         .hero { padding: 36px 0 48px; }
         section.block { padding: 48px 0; }
         .contact-band { padding: 36px 22px; }
       }
       @media (max-width: 520px) {
         .steps { grid-template-columns: 1fr; }
+        .services { grid-template-columns: 1fr; }
         nav.main { margin-left: 0; }
       }
     </style>
@@ -232,6 +275,7 @@
         <nav class="main" aria-label="Main">
           <a href="#crear" data-en="Start a business" data-es="Crear tu negocio" data-pt="Criar seu negócio">Start a business</a>
           <a href="#presencia" data-en="Grow your presence" data-es="Crecer tu presencia" data-pt="Crescer sua presença">Grow your presence</a>
+          <a href="#servicios" data-en="Services" data-es="Servicios" data-pt="Serviços">Services</a>
           <a href="#como" data-en="How I work" data-es="Cómo trabajo" data-pt="Como trabalho">How I work</a>
           <a href="#preguntas" data-en="Questions" data-es="Preguntas" data-pt="Perguntas">Questions</a>
           <a href="#contacto" data-en="Contact" data-es="Contacto" data-pt="Contato">Contact</a>
@@ -304,6 +348,157 @@
             <p data-en="Formation is the first rung, not the finish line. When your company exists, the work changes: be findable, look credible, answer customers, keep the books of your day in order. That is path two — and it is where a one-time start becomes a growing business." data-es="Formar la empresa es el primer escalón, no la meta. Cuando tu empresa ya existe, el trabajo cambia: que te encuentren, verte creíble, responder a los clientes, llevar el día en orden. Ese es el camino dos — y ahí es donde un comienzo se convierte en un negocio que crece." data-pt="Formar a empresa é o primeiro degrau, não a linha de chegada. Quando sua empresa já existe, o trabalho muda: ser encontrado, parecer confiável, responder aos clientes, manter o dia a dia em ordem. Esse é o caminho dois — e é aí que um começo se transforma em um negócio que cresce.">Formation is the first rung, not the finish line. When your company exists, the work changes: be findable, look credible, answer customers, keep the books of your day in order. That is path two — and it is where a one-time start becomes a growing business.</p>
             <a class="btn" href="#presencia" data-en="See path two" data-es="Ver el camino dos" data-pt="Ver o caminho dois">See path two</a>
           </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="block" id="servicios" style="padding-top:16px">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 data-en="Services" data-es="Servicios" data-pt="Serviços">Services</h2>
+            <p data-en="Everything below is work I do myself, in English, Spanish, or Portuguese — with the starting price named up front." data-es="Todo lo que sigue es trabajo que hago yo misma, en español, inglés o portugués — con el precio inicial dicho desde el principio." data-pt="Tudo o que segue é trabalho que eu mesma faço, em português, espanhol ou inglês — com o preço inicial dito desde o começo.">Everything below is work I do myself, in English, Spanish, or Portuguese — with the starting price named up front.</p>
+          </div>
+          <div class="services">
+            <article class="service">
+              <h3 data-en="Presence Audit" data-es="Auditoría de presencia" data-pt="Auditoria de Presença">Presence Audit</h3>
+              <p class="price">$99</p>
+              <p class="desc" data-en="A fixed-scope review of your website, Google profile, socials, and how you show up in Google and AI search. Written findings and a ranked fix list. The $99 is credited toward any package you start within 30 days." data-es="Una revisión de alcance fijo de tu sitio web, tu perfil de Google, tus redes sociales, y cómo apareces en Google y en la búsqueda con IA. Hallazgos por escrito y una lista de correcciones en orden de prioridad. Los $99 se acreditan a cualquier paquete que comiences dentro de 30 días." data-pt="Uma revisão de escopo fixo do seu site, perfil do Google, redes sociais, e como você aparece no Google e na busca com IA. Conclusões por escrito e uma lista de correções em ordem de prioridade. Os $99 são creditados em qualquer pacote que você iniciar em até 30 dias.">A fixed-scope review of your website, Google profile, socials, and how you show up in Google and AI search. Written findings and a ranked fix list. The $99 is credited toward any package you start within 30 days.</p>
+            </article>
+            <article class="service">
+              <h3 data-en="Launch Site" data-es="Sitio de lanzamiento" data-pt="Site de Lançamento">Launch Site</h3>
+              <p class="price" data-en="$499 · one-time" data-es="$499 · pago único" data-pt="$499 · pagamento único">$499 · one-time</p>
+              <p class="desc" data-en="A clean one-page website: who you are, what you offer, and how to reach you (call or WhatsApp). Domain and hosting set up in YOUR name." data-es="Un sitio web limpio de una sola página: quién eres, qué ofreces y cómo contactarte (llamada o WhatsApp). Dominio y alojamiento configurados a TU nombre." data-pt="Um site limpo de uma página: quem você é, o que você oferece e como falar com você (ligação ou WhatsApp). Domínio e hospedagem configurados no SEU nome.">A clean one-page website: who you are, what you offer, and how to reach you (call or WhatsApp). Domain and hosting set up in YOUR name.</p>
+            </article>
+            <article class="service">
+              <h3 data-en="Small Business Site" data-es="Sitio web para tu negocio" data-pt="Site para Pequenas Empresas">Small Business Site</h3>
+              <p class="price" data-en="$1,200 · one-time" data-es="$1,200 · pago único" data-pt="$1.200 · pagamento único">$1,200 · one-time</p>
+              <p class="desc" data-en="Up to five pages — home, services, about, your work, contact — with a contact form and your Google profile connected." data-es="Hasta cinco páginas — inicio, servicios, sobre ti, tu trabajo, contacto — con un formulario de contacto y tu perfil de Google conectado." data-pt="Até cinco páginas — início, serviços, sobre, seu trabalho, contato — com um formulário de contato e seu perfil do Google conectado.">Up to five pages — home, services, about, your work, contact — with a contact form and your Google profile connected.</p>
+            </article>
+            <article class="service">
+              <h3 data-en="Website Care" data-es="Cuidado de tu sitio web" data-pt="Cuidado do Site">Website Care</h3>
+              <p class="price" data-en="From $79/month" data-es="Desde $79/mes" data-pt="A partir de $79/mês">From $79/month</p>
+              <p class="desc" data-en="Updates, backups, uptime checks, and small content edits, with a short health note every month. Your site stays alive and current; you never touch it." data-es="Actualizaciones, copias de seguridad, revisión de disponibilidad y pequeños cambios de contenido, con una breve nota de salud cada mes. Tu sitio se mantiene vivo y actualizado; tú nunca lo tocas." data-pt="Atualizações, backups, verificações de disponibilidade e pequenas edições de conteúdo, com um breve relatório de saúde todo mês. Seu site fica vivo e atualizado; você nunca precisa mexer nele.">Updates, backups, uptime checks, and small content edits, with a short health note every month. Your site stays alive and current; you never touch it.</p>
+            </article>
+            <article class="service">
+              <h3 data-en="SEO Foundation" data-es="Base SEO" data-pt="Fundação SEO">SEO Foundation</h3>
+              <p class="price" data-en="$399 · one-time" data-es="$399 · pago único" data-pt="$399 · pagamento único">$399 · one-time</p>
+              <p class="desc" data-en="The one-time setup: page titles and structure, local signals, sitemap, analytics — for Google AND for AI search engines like ChatGPT and Gemini." data-es="La configuración única: títulos y estructura de las páginas, señales locales, mapa del sitio, analítica — para Google Y para los motores de búsqueda con IA como ChatGPT y Gemini." data-pt="A configuração única: títulos e estrutura das páginas, sinais locais, mapa do site, analytics — para o Google E para os motores de busca com IA como ChatGPT e Gemini.">The one-time setup: page titles and structure, local signals, sitemap, analytics — for Google AND for AI search engines like ChatGPT and Gemini.</p>
+            </article>
+            <article class="service">
+              <h3 data-en="Visibility Starter" data-es="Visibilidad inicial" data-pt="Visibilidade Inicial">Visibility Starter</h3>
+              <p class="price" data-en="$299/month" data-es="$299/mes" data-pt="$299/mês">$299/month</p>
+              <p class="desc" data-en="A monthly cycle: measure, fix, report. Traditional SEO plus being found by AI search. Measured and reported honestly — I never promise rankings." data-es="Un ciclo mensual: medir, corregir, reportar. SEO tradicional más ser encontrado por la búsqueda con IA. Medido y reportado con honestidad — nunca prometo rankings." data-pt="Um ciclo mensal: medir, corrigir, relatar. SEO tradicional mais ser encontrado pela busca com IA. Medido e relatado com honestidade — eu nunca prometo rankings.">A monthly cycle: measure, fix, report. Traditional SEO plus being found by AI search. Measured and reported honestly — I never promise rankings.</p>
+            </article>
+            <article class="service">
+              <h3 data-en="Social Setup" data-es="Configuración de redes sociales" data-pt="Configuração Social">Social Setup</h3>
+              <p class="price" data-en="$199 · two platforms — Full Presence Setup $449" data-es="$199 · dos plataformas — Configuración completa de presencia $449" data-pt="$199 · duas plataformas — Configuração Completa de Presença $449">$199 · two platforms — Full Presence Setup $449</p>
+              <p class="desc" data-en="Your profiles created or completed properly: photos, bios, links — consistent everywhere. The full setup includes your Google Business Profile." data-es="Tus perfiles creados o completados como debe ser: fotos, biografías, enlaces — consistentes en todas partes. La configuración completa incluye tu Perfil de Negocio de Google." data-pt="Seus perfis criados ou completados do jeito certo: fotos, biografias, links — consistentes em todo lugar. A configuração completa inclui seu Perfil da Empresa no Google.">Your profiles created or completed properly: photos, bios, links — consistent everywhere. The full setup includes your Google Business Profile.</p>
+            </article>
+            <article class="service">
+              <h3 data-en="Social Management" data-es="Gestión de redes sociales" data-pt="Gestão de Redes Sociais">Social Management</h3>
+              <p class="price" data-en="From $399/month" data-es="Desde $399/mes" data-pt="A partir de $399/mês">From $399/month</p>
+              <p class="desc" data-en="Planned posts and short videos, captions in English, Spanish, or Portuguese, and first responses to comments and messages." data-es="Publicaciones planificadas y videos cortos, textos en inglés, español o portugués, y primeras respuestas a comentarios y mensajes." data-pt="Postagens planejadas e vídeos curtos, legendas em inglês, espanhol ou português, e primeiras respostas a comentários e mensagens.">Planned posts and short videos, captions in English, Spanish, or Portuguese, and first responses to comments and messages.</p>
+            </article>
+            <article class="service">
+              <h3 data-en="Operations Support" data-es="Apoyo operativo" data-pt="Suporte Operacional">Operations Support</h3>
+              <p class="price" data-en="Quoted per project" data-es="Cotizado por proyecto" data-pt="Orçamento por projeto">Quoted per project</p>
+              <p class="desc" data-en="Research and spreadsheets, inbox and customer email support, writing and editing — in English, Spanish, or Portuguese." data-es="Investigación y hojas de cálculo, apoyo con el correo y la atención al cliente, redacción y edición — en inglés, español o portugués." data-pt="Pesquisa e planilhas, suporte de e-mail e atendimento ao cliente, redação e edição — em inglês, espanhol ou português.">Research and spreadsheets, inbox and customer email support, writing and editing — in English, Spanish, or Portuguese.</p>
+            </article>
+            <a class="service" href="#crear">
+              <h3 data-en="For founders" data-es="Para quienes empiezan" data-pt="Para quem está começando">For founders</h3>
+              <p class="price" data-en="Formation package · $399" data-es="Paquete de formación · $399" data-pt="Pacote de formação · $399">Formation package · $399</p>
+              <p class="desc" data-en="Starting a business? Formation package $399 — see Crear tu negocio above." data-es="¿Vas a crear tu negocio? Paquete de formación $399 — mira Crear tu negocio arriba." data-pt="Vai criar seu negócio? Pacote de formação $399 — veja Criar seu negócio acima.">Starting a business? Formation package $399 — see Crear tu negocio above.</p>
+            </a>
+          </div>
+          <div class="compare">
+            <h3 data-en="See the difference" data-es="Mira la diferencia" data-pt="Veja a diferença">See the difference</h3>
+            <p class="compare-intro" data-en="The same work, priced for a small business — not for an agency budget." data-es="El mismo trabajo, con precios pensados para un negocio pequeño, no para un presupuesto de agencia." data-pt="O mesmo trabalho, com preços pensados para um pequeno negócio, não para um orçamento de agência.">The same work, priced for a small business — not for an agency budget.</p>
+            <div class="compare-rows">
+              <div class="compare-row">
+                <p class="svc-name" data-en="One-page website" data-es="Sitio de una página" data-pt="Site de uma página">One-page website</p>
+                <div class="bar-line emma-line">
+                  <span class="bar-who">Emma</span>
+                  <div class="bar-track"><div class="bar-fill emma-fill" style="width:50%"></div></div>
+                  <span class="bar-price">$499</span>
+                </div>
+                <div class="bar-line typ-line">
+                  <span class="bar-who" data-en="Typical" data-es="Lo típico" data-pt="O típico">Typical</span>
+                  <div class="bar-track"><div class="bar-fill typ-fill" style="width:100%"></div></div>
+                  <span class="bar-price">$750–$1,000</span>
+                </div>
+              </div>
+              <div class="compare-row">
+                <p class="svc-name" data-en="Five-page website" data-es="Sitio de cinco páginas" data-pt="Site de cinco páginas">Five-page website</p>
+                <div class="bar-line emma-line">
+                  <span class="bar-who">Emma</span>
+                  <div class="bar-track"><div class="bar-fill emma-fill" style="width:30%"></div></div>
+                  <span class="bar-price">$1,200</span>
+                </div>
+                <div class="bar-line typ-line">
+                  <span class="bar-who" data-en="Typical" data-es="Lo típico" data-pt="O típico">Typical</span>
+                  <div class="bar-track"><div class="bar-fill typ-fill" style="width:100%"></div></div>
+                  <span class="bar-price">$1,000–$4,000</span>
+                </div>
+              </div>
+              <div class="compare-row">
+                <p class="svc-name" data-en="Website care, monthly" data-es="Cuidado del sitio, mensual" data-pt="Manutenção do site, mensal">Website care, monthly</p>
+                <div class="bar-line emma-line">
+                  <span class="bar-who">Emma</span>
+                  <div class="bar-track"><div class="bar-fill emma-fill" style="width:40%"></div></div>
+                  <span class="bar-price" data-en="from $79/mo" data-es="desde $79/mes" data-pt="a partir de $79/mês">from $79/mo</span>
+                </div>
+                <div class="bar-line typ-line">
+                  <span class="bar-who" data-en="Typical" data-es="Lo típico" data-pt="O típico">Typical</span>
+                  <div class="bar-track"><div class="bar-fill typ-fill" style="width:100%"></div></div>
+                  <span class="bar-price" data-en="$99–$199/mo" data-es="$99–$199/mes" data-pt="$99–$199/mês">$99–$199/mo</span>
+                </div>
+              </div>
+              <div class="compare-row">
+                <p class="svc-name" data-en="SEO setup" data-es="Configuración SEO" data-pt="Configuração de SEO">SEO setup</p>
+                <div class="bar-line emma-line">
+                  <span class="bar-who">Emma</span>
+                  <div class="bar-track"><div class="bar-fill emma-fill" style="width:27%"></div></div>
+                  <span class="bar-price">$399</span>
+                </div>
+                <div class="bar-line typ-line">
+                  <span class="bar-who" data-en="Typical" data-es="Lo típico" data-pt="O típico">Typical</span>
+                  <div class="bar-track"><div class="bar-fill typ-fill" style="width:100%"></div></div>
+                  <span class="bar-price">$750–$1,500</span>
+                </div>
+              </div>
+              <div class="compare-row">
+                <p class="svc-name" data-en="Monthly visibility" data-es="Visibilidad mensual" data-pt="Visibilidade mensal">Monthly visibility</p>
+                <div class="bar-line emma-line">
+                  <span class="bar-who">Emma</span>
+                  <div class="bar-track"><div class="bar-fill emma-fill" style="width:20%"></div></div>
+                  <span class="bar-price" data-en="$299/mo" data-es="$299/mes" data-pt="$299/mês">$299/mo</span>
+                </div>
+                <div class="bar-line typ-line">
+                  <span class="bar-who" data-en="Typical" data-es="Lo típico" data-pt="O típico">Typical</span>
+                  <div class="bar-track"><div class="bar-fill typ-fill" style="width:100%"></div></div>
+                  <span class="bar-price" data-en="$500–$1,500/mo" data-es="$500–$1,500/mes" data-pt="$500–$1,500/mês">$500–$1,500/mo</span>
+                </div>
+              </div>
+              <div class="compare-row">
+                <p class="svc-name" data-en="Social media management, monthly" data-es="Manejo de redes sociales, mensual" data-pt="Gestão de redes sociais, mensal">Social media management, monthly</p>
+                <div class="bar-line emma-line">
+                  <span class="bar-who">Emma</span>
+                  <div class="bar-track"><div class="bar-fill emma-fill" style="width:57%"></div></div>
+                  <span class="bar-price" data-en="from $399/mo" data-es="desde $399/mes" data-pt="a partir de $399/mês">from $399/mo</span>
+                </div>
+                <div class="bar-line typ-line">
+                  <span class="bar-who" data-en="Typical" data-es="Lo típico" data-pt="O típico">Typical</span>
+                  <div class="bar-track"><div class="bar-fill typ-fill" style="width:100%"></div></div>
+                  <span class="bar-price" data-en="from $699/mo" data-es="desde $699/mes" data-pt="a partir de $699/mês">from $699/mo</span>
+                </div>
+              </div>
+            </div>
+            <p class="compare-note" data-en="Typical ranges come from published prices of US freelancers and small studios, checked in November 2026. Your price is always confirmed in writing before any work starts." data-es="Los rangos típicos vienen de precios publicados de freelancers y estudios pequeños en USA, revisados en noviembre de 2026. Tu precio siempre se confirma por escrito antes de empezar cualquier trabajo." data-pt="As faixas típicas vêm de preços publicados de freelancers e pequenos estúdios nos EUA, verificados em novembro de 2026. Seu preço é sempre confirmado por escrito antes de qualquer trabalho começar.">Typical ranges come from published prices of US freelancers and small studios, checked in November 2026. Your price is always confirmed in writing before any work starts.</p>
+          </div>
+          <div class="svc-rules">
+            <p data-en="Every price is a starting point, confirmed in writing before any work begins. No surprise charges, nothing renews without your yes. Visibility work is measured and reported — rankings are never guaranteed, by me or anyone honest." data-es="Cada precio es un punto de partida, confirmado por escrito antes de comenzar cualquier trabajo. Sin cargos sorpresa, nada se renueva sin tu sí. El trabajo de visibilidad se mide y se reporta — los rankings nunca están garantizados, por mí ni por nadie honesto." data-pt="Cada preço é um ponto de partida, confirmado por escrito antes de qualquer trabalho começar. Sem cobranças surpresa, nada se renova sem o seu sim. O trabalho de visibilidade é medido e relatado — rankings nunca são garantidos, por mim nem por ninguém honesto.">Every price is a starting point, confirmed in writing before any work begins. No surprise charges, nothing renews without your yes. Visibility work is measured and reported — rankings are never guaranteed, by me or anyone honest.</p>
+          </div>
+          <p class="svc-referral" data-en="Need something I don't do myself — a registered agent, payroll, insurance, or legal help? I work with trusted local providers in the areas I serve and will point you to the right one. If I ever earn a referral fee, it is disclosed and it never changes your price." data-es="¿Necesitas algo que yo no hago — un registered agent, nómina, seguros o ayuda legal? Trabajo con proveedores locales de confianza en las zonas donde atiendo y te recomiendo al indicado. Si alguna vez gano una comisión por recomendación, se declara y nunca cambia tu precio." data-pt="Precisa de algo que eu não faço — um registered agent, folha de pagamento, seguros ou ajuda jurídica? Trabalho com prestadores locais de confiança nas áreas onde atendo e te indico o certo. Se eu algum dia ganhar uma comissão por indicação, ela é declarada e nunca muda o seu preço.">Need something I don't do myself — a registered agent, payroll, insurance, or legal help? I work with trusted local providers in the areas I serve and will point you to the right one. If I ever earn a referral fee, it is disclosed and it never changes your price.</p>
         </div>
       </section>
 
