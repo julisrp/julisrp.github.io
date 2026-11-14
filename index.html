@@ -94,19 +94,19 @@
         background: var(--bg);
         border-bottom: 1px solid var(--line);
       }
-      .topbar-in { display: flex; align-items: center; gap: 14px; padding: 10px 0; flex-wrap: wrap; }
-      .brand { font-family: "Lora", Georgia, serif; font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+      .topbar-in { display: flex; align-items: center; gap: 10px; padding: 6px 0; flex-wrap: wrap; }
+      .brand { font-family: "Lora", Georgia, serif; font-weight: 700; font-size: 1.12rem; color: var(--ink); text-decoration: none; line-height: 1.15; white-space: nowrap; }
       .brand span { color: var(--accent); }
-      nav.main { margin-left: auto; display: flex; gap: 2px; flex-wrap: wrap; }
+      nav.main { margin-left: auto; display: flex; gap: 0; flex-wrap: wrap; }
       nav.main a {
-        color: var(--ink); text-decoration: none; font-size: .95rem; font-weight: 500;
-        padding: 10px 10px; min-height: 40px; display: inline-flex; align-items: center; border-radius: 6px;
+        color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 500;
+        padding: 6px 7px; min-height: 34px; display: inline-flex; align-items: center; border-radius: 6px;
       }
       nav.main a:hover { background: var(--surface); }
-      .lang-toggle { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 999px; overflow: hidden; }
+      .lang-toggle { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 999px; overflow: hidden; flex: 0 0 auto; }
       .lang-toggle button {
         border: 0; background: transparent; color: var(--ink); font: inherit;
-        padding: 7px 10px; min-height: 38px; cursor: pointer; display: inline-flex; align-items: center;
+        padding: 5px 8px; min-height: 34px; cursor: pointer; display: inline-flex; align-items: center;
       }
       .lang-toggle button svg { display: block; }
       .lang-toggle button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
@@ -252,14 +252,40 @@
 
       footer { padding: 34px 0 44px; color: var(--ink-soft); font-size: .92rem; }
       footer .wrap { display: flex; gap: 14px; flex-wrap: wrap; justify-content: space-between; }
+      footer .legal-wrap { display: block; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+      .legal-disclaimer { font-size: .78rem; line-height: 1.6; color: var(--ink-soft); max-width: 82em; }
 
       @media (max-width: 860px) {
         .hero-grid, .paths, .about-grid { grid-template-columns: 1fr; }
+        .hero-grid { gap: 30px; }
         .steps { grid-template-columns: 1fr 1fr; }
         .services { grid-template-columns: 1fr 1fr; }
-        .hero { padding: 36px 0 48px; }
+        .hero { padding: 28px 0 48px; }
         section.block { padding: 48px 0; }
         .contact-band { padding: 36px 22px; }
+      }
+      /* Compact header: brand + flags share one slim row, nav sits in a
+         tight mini-row directly underneath */
+      @media (max-width: 700px) {
+        .topbar-in {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          grid-template-areas: "brand lang" "nav nav";
+          gap: 1px 10px;
+          padding: 5px 0 6px;
+          align-items: center;
+        }
+        .brand { grid-area: brand; font-size: 1.06rem; }
+        .lang-toggle { grid-area: lang; justify-self: end; }
+        .lang-toggle button { padding: 4px 7px; min-height: 32px; }
+        .lang-toggle button svg { width: 22px; height: 16px; }
+        nav.main { grid-area: nav; margin-left: 0; gap: 0 1px; }
+        nav.main a {
+          font-size: .84rem; line-height: 1.25;
+          padding: 3px 6px; min-height: 29px;
+        }
+        .hero { padding: 22px 0 44px; }
+        .hero .where { margin-bottom: 12px; }
       }
       @media (max-width: 520px) {
         .steps { grid-template-columns: 1fr; }
@@ -282,7 +308,7 @@
         </nav>
         <div class="lang-toggle" role="group" aria-label="Language / Idioma / Língua">
           <button type="button" id="btn-en" aria-pressed="true" aria-label="English" title="English"><svg viewBox="0 0 26 19" width="26" height="19" aria-hidden="true" focusable="false"><clipPath id="fus"><rect width="26" height="19" rx="2.5"/></clipPath><g clip-path="url(#fus)"><rect width="26" height="19" fill="#ffffff"/><g fill="#b22234"><rect width="26" height="1.47"/><rect y="2.92" width="26" height="1.47"/><rect y="5.85" width="26" height="1.47"/><rect y="8.77" width="26" height="1.47"/><rect y="11.69" width="26" height="1.47"/><rect y="14.62" width="26" height="1.47"/><rect y="17.54" width="26" height="1.47"/></g><rect width="12" height="10.23" fill="#3c3b6e"/><g fill="#ffffff"><circle cx="2" cy="2.1" r=".62"/><circle cx="5" cy="2.1" r=".62"/><circle cx="8" cy="2.1" r=".62"/><circle cx="11" cy="2.1" r=".62"/><circle cx="2" cy="5" r=".62"/><circle cx="5" cy="5" r=".62"/><circle cx="8" cy="5" r=".62"/><circle cx="11" cy="5" r=".62"/><circle cx="2" cy="7.9" r=".62"/><circle cx="5" cy="7.9" r=".62"/><circle cx="8" cy="7.9" r=".62"/><circle cx="11" cy="7.9" r=".62"/></g></g></svg></button>
-          <button type="button" id="btn-es" aria-pressed="false" aria-label="Español" title="Español"><svg viewBox="0 0 26 19" width="26" height="19" aria-hidden="true" focusable="false"><clipPath id="fmx"><rect width="26" height="19" rx="2.5"/></clipPath><g clip-path="url(#fmx)"><rect width="26" height="19" fill="#ffffff"/><rect width="8.67" height="19" fill="#006847"/><rect x="17.33" width="8.67" height="19" fill="#ce1126"/><path d="M10.7 8.1c1.3-1 3.3-1 4.6 0-.6.3-1 .8-1.2 1.3l1 .9-1.5-.2c-.4.2-.8.2-1.2 0l-1.5.2 1-.9c-.2-.5-.6-1-1.2-1.3z" fill="#8a5a2b"/><path d="M11.3 13.9c.5-.6 1.1-.9 1.7-.9s1.2.3 1.7.9" fill="none" stroke="#1e7a46" stroke-width="1.1" stroke-linecap="round"/></g></svg></button>
+          <button type="button" id="btn-es" aria-pressed="false" aria-label="Español — España" title="Español"><svg viewBox="0 0 26 19" width="26" height="19" aria-hidden="true" focusable="false"><clipPath id="fes"><rect width="26" height="19" rx="2.5"/></clipPath><g clip-path="url(#fes)"><rect width="26" height="19" fill="#F1BF00"/><rect width="26" height="4.75" fill="#AA151B"/><rect y="14.25" width="26" height="4.75" fill="#AA151B"/><g><rect x="5.8" y="6.8" width="3.6" height="5.4" rx="0.7" fill="#AA151B" stroke="#ffffff" stroke-width="0.35"/><rect x="6.45" y="7.55" width="2.3" height="1.65" fill="#F1BF00"/><rect x="7.15" y="9.55" width="0.9" height="1.65" fill="#ffffff" opacity="0.9"/></g></g></svg></button>
           <button type="button" id="btn-pt" aria-pressed="false" aria-label="Português" title="Português"><svg viewBox="0 0 26 19" width="26" height="19" aria-hidden="true" focusable="false"><clipPath id="fbr"><rect width="26" height="19" rx="2.5"/></clipPath><clipPath id="fbrc"><circle cx="13" cy="9.5" r="3.5"/></clipPath><g clip-path="url(#fbr)"><rect width="26" height="19" fill="#009c3b"/><polygon points="13,2.4 23.6,9.5 13,16.6 2.4,9.5" fill="#ffdf00"/><circle cx="13" cy="9.5" r="3.5" fill="#002776"/><g clip-path="url(#fbrc)"><rect x="8.6" y="10" width="8.8" height="1.05" fill="#ffffff" transform="rotate(-16 13 9.5)"/><circle cx="11.3" cy="7.4" r=".45" fill="#ffffff"/><circle cx="14.7" cy="8" r=".38" fill="#ffffff"/><circle cx="12.9" cy="12.4" r=".4" fill="#ffffff"/></g></g></svg></button>
         </div>
       </div>
@@ -608,13 +634,17 @@
             <p class="close-line" data-en="I am Emma Morgan, your partner to start and grow your business. <strong>Follow me — and if you have any question, write to me. No commitment at all; I will look at how I can help you.</strong>" data-es="Soy Emma Morgan, tu socia para crear y crecer tu negocio. <strong>Sígueme — y si tienes alguna pregunta, escríbeme. Sin ningún compromiso, miraré cómo te puedo ayudar.</strong>" data-pt="Sou Emma Morgan, sua sócia para criar e fazer crescer o seu negócio. <strong>Siga-me — e se você tiver alguma pergunta, escreva para mim. Sem nenhum compromisso, verei como posso te ajudar.</strong>">I am Emma Morgan, your partner to start and grow your business. <strong>Follow me — and if you have any question, write to me. No commitment at all; I will look at how I can help you.</strong></p>
             <a class="btn" href="mailto:emma@emmamorganpartner.com?subject=Tengo%20una%20pregunta%20%2F%20I%20have%20a%20question">emma@emmamorganpartner.com</a>
             <div class="socials">
-              <p data-en="My profiles are launching now — YouTube, Instagram, Facebook, LinkedIn, and X. Until they are live, email reaches me fastest." data-es="Mis perfiles se están lanzando ahora — YouTube, Instagram, Facebook, LinkedIn y X. Mientras tanto, el correo es la vía más rápida para llegar a mí." data-pt="Meus perfis estão sendo lançados agora — YouTube, Instagram, Facebook, LinkedIn e X. Enquanto isso, o e-mail é a maneira mais rápida de falar comigo.">My profiles are launching now — YouTube, Instagram, Facebook, LinkedIn, and X. Until they are live, email reaches me fastest.</p>
+              <p data-en="My profiles are live — find me on TikTok, YouTube, Facebook, X, LinkedIn, and Pinterest. The Instagram link is coming next; email still reaches me fastest." data-es="Mis perfiles ya están en vivo — encuéntrame en TikTok, YouTube, Facebook, X, LinkedIn y Pinterest. El enlace de Instagram viene ahora; el correo sigue siendo la vía más rápida." data-pt="Meus perfis já estão no ar — encontre-me no TikTok, YouTube, Facebook, X, LinkedIn e Pinterest. O link do Instagram vem a seguir; o e-mail continua sendo a maneira mais rápida.">My profiles are live — find me on TikTok, YouTube, Facebook, X, LinkedIn, and Pinterest. The Instagram link is coming next; email still reaches me fastest.</p>
               <div class="chips">
-                <span class="chip">YouTube</span>
+                <a class="chip" href="https://www.tiktok.com/@emmamorgansocia" target="_blank" rel="noopener" style="text-decoration:none">TikTok</a>
+                <a class="chip" href="https://www.youtube.com/@emmamorgansocia" target="_blank" rel="noopener" style="text-decoration:none">YouTube · Socia</a>
+                <a class="chip" href="https://www.youtube.com/@emmamorganpartner" target="_blank" rel="noopener" style="text-decoration:none">YouTube · Partner</a>
+                <a class="chip" href="https://www.facebook.com/profile.php?id=61596366998660" target="_blank" rel="noopener" style="text-decoration:none">Facebook · Socia</a>
+                <a class="chip" href="https://www.facebook.com/profile.php?id=61596229874494" target="_blank" rel="noopener" style="text-decoration:none">Facebook · Partner</a>
+                <a class="chip" href="https://x.com/EmmaMorgan617" target="_blank" rel="noopener" style="text-decoration:none">X</a>
+                <a class="chip" href="https://www.linkedin.com/in/emma-morgan-0a061944b/" target="_blank" rel="noopener" style="text-decoration:none">LinkedIn</a>
+                <a class="chip" href="https://www.pinterest.com/emmamorgansocia/" target="_blank" rel="noopener" style="text-decoration:none">Pinterest</a>
                 <span class="chip">Instagram</span>
-                <span class="chip">Facebook</span>
-                <span class="chip">LinkedIn</span>
-                <span class="chip">X</span>
               </div>
             </div>
           </div>
@@ -626,6 +656,9 @@
       <div class="wrap">
         <p>© 2026 Emma Morgan · Boston, MA</p>
         <p data-en="Educational content and general information — not legal, tax, or financial advice. Your case deserves its own look." data-es="Contenido educativo e información general — no es asesoría legal, fiscal ni financiera. Tu caso merece su propia revisión." data-pt="Conteúdo educacional e informações gerais — não é assessoria legal, fiscal nem financeira. O seu caso merece uma análise própria.">Educational content and general information — not legal, tax, or financial advice. Your case deserves its own look.</p>
+      </div>
+      <div class="wrap legal-wrap">
+        <p class="legal-disclaimer" data-en="Emma Morgan provides business formation support, document preparation, and online presence services. I am not a law firm, an attorney, a CPA, or a tax advisor. Nothing on this site is legal, tax, or financial advice, and using these services creates no attorney-client or professional relationship. The information here is general education — you choose your entity, and you remain responsible for the accuracy of your information and for your licenses, taxes, and deadlines. Results, approvals, rankings, and income are never guaranteed. Where liability is established, it is limited to the amount paid for the service that gave rise to the claim, and indirect, consequential, and punitive damages are excluded to the fullest extent permitted by law." data-es="Emma Morgan ofrece apoyo en la formación de empresas, preparación de documentos y servicios de presencia en línea. No soy un bufete de abogados, ni abogada, ni contadora pública (CPA), ni asesora fiscal. Nada en este sitio es asesoría legal, fiscal o financiera, y el uso de estos servicios no crea ninguna relación abogado-cliente ni relación profesional. La información aquí es educación general: tú eliges tu tipo de empresa y sigues siendo responsable de la exactitud de tu información y de tus licencias, impuestos y plazos. Los resultados, las aprobaciones, los rankings y los ingresos nunca están garantizados. Cuando se establezca responsabilidad, esta se limita al monto pagado por el servicio que dio origen al reclamo, y los daños indirectos, consecuentes y punitivos quedan excluidos en la máxima medida permitida por la ley." data-pt="Emma Morgan oferece apoio na formação de empresas, preparação de documentos e serviços de presença online. Não sou um escritório de advocacia, nem advogada, nem contadora (CPA), nem consultora fiscal. Nada neste site é aconselhamento jurídico, fiscal ou financeiro, e o uso destes serviços não cria nenhuma relação advogado-cliente nem relação profissional. As informações aqui são educação geral: você escolhe o tipo da sua empresa e continua responsável pela exatidão das suas informações e pelas suas licenças, impostos e prazos. Resultados, aprovações, rankings e renda nunca são garantidos. Quando houver responsabilidade comprovada, ela se limita ao valor pago pelo serviço que deu origem à reclamação, e danos indiretos, consequentes e punitivos ficam excluídos na máxima extensão permitida por lei.">Emma Morgan provides business formation support, document preparation, and online presence services. I am not a law firm, an attorney, a CPA, or a tax advisor. Nothing on this site is legal, tax, or financial advice, and using these services creates no attorney-client or professional relationship. The information here is general education — you choose your entity, and you remain responsible for the accuracy of your information and for your licenses, taxes, and deadlines. Results, approvals, rankings, and income are never guaranteed. Where liability is established, it is limited to the amount paid for the service that gave rise to the claim, and indirect, consequential, and punitive damages are excluded to the fullest extent permitted by law.</p>
       </div>
     </footer>
 
