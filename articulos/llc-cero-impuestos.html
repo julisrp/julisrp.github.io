@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¿Una LLC paga 0% impuestos? | Emma Morgan</title>
+    <meta name="description" content="Solo en un caso específico. Cuándo el 0% es real, cuándo se cae, y por qué reportar (Formulario 5472 + 1120) es obligatorio siempre, aunque el impuesto sea cero.">
+    <link rel="canonical" href="https://emmamorganpartner.com/articulos/llc-cero-impuestos.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="¿Una LLC paga 0% impuestos? | Emma Morgan">
+    <meta property="og:description" content="Solo en un caso específico. Cuándo el 0% es real, cuándo se cae, y por qué reportar (Formulario 5472 + 1120) es obligatorio siempre, aunque el impuesto sea cero.">
+    <meta property="og:url" content="https://emmamorganpartner.com/articulos/llc-cero-impuestos.html">
+    <style>
+:root {
+        --bg: #f6f5f1;
+        --surface: #ffffff;
+        --ink: #1c2733;
+        --ink-soft: #47545f;
+        --navy: #14273d;
+        --navy-ink: #eef3f7;
+        --navy-soft: #b9c9d8;
+        --accent: #b5502a;
+        --accent-ink: #9c3f1f;
+        --line: #ddd8cc;
+        --gold: #c99a3f;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1722;
+          --surface: #152434;
+          --ink: #edf1f4;
+          --ink-soft: #a9b8c4;
+          --navy: #0a141f;
+          --navy-ink: #eef3f7;
+          --navy-soft: #9db2c4;
+          --accent: #e08a5a;
+          --accent-ink: #eda87e;
+          --line: #2b3d4f;
+          --gold: #d9ab55;
+          color-scheme: dark;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Libre Franklin", system-ui, sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.65;
+      }
+      h1, h2, h3 { font-family: "Lora", Georgia, serif; line-height: 1.2; margin: 0; }
+      p { margin: 0; }
+      a { color: var(--accent-ink); }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+      /* Top bar */
+      .topbar {
+        position: sticky; top: 0; z-index: 20;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+      }
+      .topbar-in { display: flex; align-items: center; gap: 10px; padding: 6px 0; flex-wrap: wrap; }
+      .brand { font-family: "Lora", Georgia, serif; font-weight: 700; font-size: 1.12rem; color: var(--ink); text-decoration: none; line-height: 1.15; white-space: nowrap; }
+      .brand span { color: var(--accent); }
+      nav.main { margin-left: auto; display: flex; gap: 0; flex-wrap: wrap; }
+      nav.main a {
+        color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 500;
+        padding: 6px 7px; min-height: 34px; display: inline-flex; align-items: center; border-radius: 6px;
+      }
+      nav.main a:hover { background: var(--surface); }
+      .lang-toggle { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 999px; overflow: hidden; flex: 0 0 auto; }
+      .lang-toggle button {
+        border: 0; background: transparent; color: var(--ink); font: inherit;
+        padding: 5px 8px; min-height: 34px; cursor: pointer; display: inline-flex; align-items: center;
+      }
+      .lang-toggle button svg { display: block; }
+      .lang-toggle button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+      /* Hero */
+      .hero { padding: 56px 0 64px; }
+      .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+      .hero .where { font-size: .85rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 18px; }
+      .hero h1 { font-size: clamp(2.3rem, 5.4vw, 3.6rem); font-weight: 700; }
+      .hero h1 em { font-style: italic; color: var(--accent-ink); }
+      .hero .lede { margin-top: 20px; font-size: 1.15rem; color: var(--ink-soft); max-width: 34em; }
+      .hero .sig { margin-top: 22px; font-family: "Lora", Georgia, serif; font-style: italic; font-size: 1.05rem; border-left: 3px solid var(--gold); padding-left: 14px; }
+      .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        min-height: 48px; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 1rem;
+        text-decoration: none; cursor: pointer; border: 1.5px solid transparent;
+      }
+      .btn-solid { background: var(--accent); color: #fff; }
+      .btn-solid:hover { background: var(--accent-ink); }
+      .btn-ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+      .btn-ghost:hover { background: var(--surface); }
+      .hero-photo { position: relative; }
+      .hero-photo img {
+        width: 100%; height: auto;
+        border-radius: 14px; display: block;
+      }
+      .hero-photo figcaption {
+        margin-top: 12px; font-size: .9rem; color: var(--ink-soft); text-align: center;
+      }
+
+      /* Sections */
+      section.block { padding: 64px 0; }
+      .sec-head { max-width: 44em; margin-bottom: 36px; }
+      .sec-head h2 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); font-weight: 700; }
+      .sec-head p { margin-top: 12px; color: var(--ink-soft); font-size: 1.08rem; }
+
+      /* Paths */
+      .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      .path {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 30px;
+        display: flex; flex-direction: column;
+      }
+      .path .tag { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
+      .path h3 { font-size: 1.55rem; margin-top: 10px; }
+      .path .who { margin-top: 8px; color: var(--ink-soft); }
+      .path .creed { font-family: "Lora", Georgia, serif; font-style: italic; font-size: 1.08rem; margin-top: 14px; border-left: 3px solid var(--gold); padding-left: 14px; }
+      .path ul { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 12px; }
+      .path li { padding-left: 26px; position: relative; }
+      .path li::before { content: "—"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+      .path .note { margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--line); font-size: .95rem; color: var(--ink-soft); }
+      .path .note strong { color: var(--ink); }
+      .bridge {
+        margin-top: 24px; background: var(--navy); color: var(--navy-ink); border-radius: 14px; padding: 28px 30px;
+        display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
+      }
+      .bridge h3 { font-size: 1.4rem; flex: 1 1 260px; }
+      .bridge p { flex: 2 1 320px; color: var(--navy-soft); }
+      .bridge .btn { background: #fff; color: var(--navy); flex: 0 0 auto; }
+      .bridge .btn:hover { background: var(--gold); color: var(--navy); }
+
+      /* Steps */
+      .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; }
+      .step { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+      .step .n { font-family: "Lora", Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--gold); }
+      .step h3 { font-size: 1.12rem; margin-top: 8px; }
+      .step p { margin-top: 8px; color: var(--ink-soft); font-size: .98rem; }
+
+      /* About + principles */
+      .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 44px; align-items: start; }
+      .about-grid img { width: 100%; height: auto; border-radius: 14px; display: block; }
+      .principles { display: grid; gap: 0; margin-top: 8px; }
+      .principle { padding: 20px 0; border-bottom: 1px solid var(--line); }
+      .principle:last-child { border-bottom: 0; }
+      .principle h3 { font-size: 1.15rem; }
+      .principle p { margin-top: 6px; color: var(--ink-soft); }
+      .about-intro { font-size: 1.12rem; margin-bottom: 10px; }
+
+      /* Services */
+      .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .service { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; }
+      .service h3 { font-size: 1.18rem; }
+      .service .price { margin-top: 8px; font-weight: 700; color: var(--accent-ink); font-size: 1.02rem; }
+      .service .desc { margin-top: 10px; color: var(--ink-soft); font-size: .98rem; }
+      a.service { text-decoration: none; color: inherit; }
+      a.service:hover { border-color: var(--accent); }
+      a.service .desc { color: var(--accent-ink); font-weight: 600; }
+      /* Price comparison chart */
+      .compare { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 28px; }
+      .compare h3 { font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 700; }
+      .compare .compare-intro { margin-top: 8px; color: var(--ink-soft); font-size: 1.02rem; max-width: 40em; }
+      .compare-rows { margin-top: 26px; display: grid; gap: 0; }
+      .compare-row { padding: 18px 0; border-bottom: 1px dashed var(--line); }
+      .compare-row:first-child { padding-top: 0; }
+      .compare-row:last-child { padding-bottom: 0; border-bottom: 0; }
+      .compare-row .svc-name { font-weight: 700; font-size: 1.02rem; margin-bottom: 10px; }
+      .bar-line { display: grid; grid-template-columns: 76px 1fr auto; gap: 12px; align-items: center; margin-top: 7px; }
+      .bar-who { font-size: .86rem; font-weight: 700; letter-spacing: .02em; }
+      .bar-line.emma-line .bar-who { color: var(--accent-ink); }
+      .bar-line.typ-line .bar-who { color: var(--ink-soft); }
+      .bar-track { height: 15px; border-radius: 999px; background: var(--line); overflow: hidden; }
+      .bar-fill { height: 100%; border-radius: 999px; }
+      .bar-fill.emma-fill { background: var(--gold); }
+      .bar-fill.typ-fill { background: #a7b1ba; }
+      @media (prefers-color-scheme: dark) { .bar-fill.typ-fill { background: #5f7488; } }
+      .bar-price { font-size: .94rem; font-weight: 700; white-space: nowrap; }
+      .bar-line.typ-line .bar-price { color: var(--ink-soft); font-weight: 600; }
+      .compare-note { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .84rem; color: var(--ink-soft); max-width: 62em; }
+      @media (max-width: 560px) {
+        .compare { padding: 22px 18px; }
+        .bar-line { grid-template-columns: 1fr auto; gap: 4px 10px; margin-top: 10px; }
+        .bar-track { grid-column: 1 / -1; }
+        .bar-price { text-align: right; }
+      }
+
+      .svc-rules { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 14px; padding: 22px 26px; }
+      .svc-rules p { font-size: 1.02rem; }
+      .svc-referral { margin-top: 16px; font-size: .9rem; color: var(--ink-soft); max-width: 62em; }
+
+      /* FAQ */
+      .faq-list { display: grid; gap: 12px; max-width: 820px; }
+      details.faq { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+      details.faq summary {
+        cursor: pointer; padding: 16px 20px; min-height: 52px; display: flex; align-items: center;
+        font-weight: 600; font-size: 1.05rem; list-style: none;
+      }
+      details.faq summary::-webkit-details-marker { display: none; }
+      details.faq summary::after { content: "+"; margin-left: auto; font-size: 1.4rem; color: var(--accent); font-weight: 400; padding-left: 12px; }
+      details.faq[open ] summary::after { content: "–"; }
+      details.faq .a { padding: 0 20px 18px; color: var(--ink-soft); }
+
+      /* Contact */
+      .contact-band { background: var(--navy); color: var(--navy-ink); border-radius: 18px; padding: 48px 40px; text-align: center; }
+      .contact-band h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+      .contact-band .close-line { margin: 18px auto 0; max-width: 38em; font-size: 1.12rem; color: var(--navy-soft); }
+      .contact-band .close-line strong { color: #fff; font-weight: 600; }
+      .contact-band .btn { margin-top: 28px; background: var(--accent); color: #fff; font-size: 1.05rem; }
+      .contact-band .btn:hover { background: var(--accent-ink); }
+      .socials { margin-top: 30px; }
+      .socials p { font-size: .95rem; color: var(--navy-soft); }
+      .chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+      .chip { border: 1px solid var(--navy-soft); color: var(--navy-ink); border-radius: 999px; padding: 6px 14px; font-size: .88rem; min-height: 36px; display: inline-flex; align-items: center; }
+
+      footer { padding: 34px 0 44px; color: var(--ink-soft); font-size: .92rem; }
+      footer .wrap { display: flex; gap: 14px; flex-wrap: wrap; justify-content: space-between; }
+      footer .legal-wrap { display: block; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+      .legal-disclaimer { font-size: .78rem; line-height: 1.6; color: var(--ink-soft); max-width: 82em; }
+
+      @media (max-width: 860px) {
+        .hero-grid, .paths, .about-grid { grid-template-columns: 1fr; }
+        .hero-grid { gap: 30px; }
+        .steps { grid-template-columns: 1fr 1fr; }
+        .services { grid-template-columns: 1fr 1fr; }
+        .hero { padding: 28px 0 48px; }
+        section.block { padding: 48px 0; }
+        .contact-band { padding: 36px 22px; }
+      }
+      /* Compact header: brand + flags share one slim row, nav sits in a
+         tight mini-row directly underneath */
+      @media (max-width: 700px) {
+        .topbar-in {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          grid-template-areas: "brand lang" "nav nav";
+          gap: 1px 10px;
+          padding: 5px 0 6px;
+          align-items: center;
+        }
+        .brand { grid-area: brand; font-size: 1.06rem; }
+        .lang-toggle { grid-area: lang; justify-self: end; }
+        .lang-toggle button { padding: 4px 7px; min-height: 32px; }
+        .lang-toggle button svg { width: 22px; height: 16px; }
+        nav.main { grid-area: nav; margin-left: 0; gap: 0 1px; }
+        nav.main a {
+          font-size: .84rem; line-height: 1.25;
+          padding: 3px 6px; min-height: 29px;
+        }
+        .hero { padding: 22px 0 44px; }
+        .hero .where { margin-bottom: 12px; }
+      }
+      @media (max-width: 520px) {
+        .steps { grid-template-columns: 1fr; }
+        .services { grid-template-columns: 1fr; }
+        nav.main { margin-left: 0; }
+      }
+
+      /* Articles */
+      [hidden] { display: none !important; }
+      .articles-head { padding: 52px 0 8px; }
+      .articles-head h1 { font-size: clamp(2rem, 4.6vw, 3rem); font-weight: 700; max-width: 20em; }
+      .articles-head p { margin-top: 14px; color: var(--ink-soft); font-size: 1.1rem; max-width: 38em; }
+      .article-cards { display: grid; gap: 20px; padding: 28px 0 64px; max-width: 860px; }
+      .article-card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 28px 30px;
+        display: block; text-decoration: none; color: inherit;
+      }
+      .article-card:hover { border-color: var(--accent); }
+      .article-card .a-date { font-size: .85rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); }
+      .article-card h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); margin-top: 10px; }
+      .article-card .a-sum { margin-top: 10px; color: var(--ink-soft); font-size: 1.05rem; }
+      .article-card .a-read { margin-top: 16px; font-weight: 700; color: var(--accent-ink); }
+      .article-page { padding: 48px 0 64px; }
+      .article-inner { max-width: 760px; }
+      .back-link { font-weight: 600; font-size: .98rem; text-decoration: none; }
+      .article-meta { margin-top: 26px; font-size: .88rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); }
+      .article-page h1 { font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700; margin-top: 12px; }
+      .direct-answer {
+        margin-top: 26px; background: var(--navy); color: var(--navy-ink);
+        border-radius: 14px; padding: 26px 28px;
+      }
+      .direct-answer .da-label { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+      .direct-answer p { margin-top: 10px; font-size: 1.14rem; line-height: 1.6; }
+      .article-body { margin-top: 10px; }
+      .article-body h2 { font-size: 1.5rem; margin-top: 36px; }
+      .article-body p { margin-top: 12px; color: var(--ink-soft); font-size: 1.08rem; }
+      .article-body p strong { color: var(--ink); }
+      .takeaway {
+        margin-top: 40px; background: var(--surface); border: 1px solid var(--line);
+        border-left: 4px solid var(--gold); border-radius: 12px; padding: 24px 26px;
+      }
+      .takeaway .t-label { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink); }
+      .takeaway p { margin-top: 10px; font-family: "Lora", Georgia, serif; font-style: italic; font-size: 1.22rem; line-height: 1.5; }
+      .article-close { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px 28px; text-align: center; }
+      .article-close p { font-size: 1.1rem; }
+      .article-close .cta-row { justify-content: center; margin-top: 20px; }
+      .article-disclaimer {
+        margin-top: 32px; background: var(--surface); border: 1px solid var(--line);
+        border-left: 4px solid var(--accent); border-radius: 12px; padding: 22px 24px;
+      }
+      .article-disclaimer p { font-size: .98rem; line-height: 1.65; color: var(--ink-soft); }
+      .article-disclaimer strong { color: var(--ink); }
+      @media (max-width: 560px) {
+        .article-card, .direct-answer, .article-close, .article-disclaimer { padding: 22px 20px; }
+        .articles-head { padding-top: 34px; }
+        .article-page { padding-top: 30px; }
+      }
+    </style>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Una LLC paga 0% impuestos?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Solo en un caso específico: si eres extranjero, no tienes empleados ni oficina en Estados Unidos y tu ingreso viene de fuera del país, ese ingreso no paga impuesto federal. En cualquier otro caso la LLC tributa como cualquier negocio. Y en todos los casos, sin excepción, reportar es obligatorio." }
+      }]
+    }
+    </script>
+  </head>
+  <body>
+<header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="/">Emma <span>Morgan</span></a>
+        <nav class="main" aria-label="Main">
+          <a href="/#crear" ">Crear tu negocio</a>
+          <a href="/#presencia" ">Crecer tu presencia</a>
+          <a href="/#servicios" ">Servicios</a>
+          <a href="/#como" ">Cómo trabajo</a>
+          <a href="/#preguntas" ">Preguntas</a>
+          <a href="/articulos/" ">Artículos</a>
+          <a href="/#contacto" ">Contacto</a>
+        </nav>
+        </div>
+    </header>
+    <main id="top">
+<article id="view-articulo-2" class="article-page">
+      <div class="wrap article-inner">
+        <a class="back-link" href="/articulos/">← Todos los artículos</a>
+        <p class="article-meta">Emma Morgan · 15 de noviembre de 2026</p>
+        <h1>¿Una LLC paga 0% impuestos?</h1>
+        <div class="direct-answer">
+          <p class="da-label">Respuesta directa</p>
+          <p>Solo en un caso específico: si eres extranjero, no tienes empleados ni oficina en Estados Unidos y tu ingreso viene de fuera del país, ese ingreso no paga impuesto federal. En cualquier otro caso la LLC tributa como cualquier negocio. Y en todos los casos, sin excepción, reportar es obligatorio.</p>
+        </div>
+        <div class="article-body">
+          <h2>El mito</h2>
+          <p>Si pasas suficiente tiempo en redes, tarde o temprano alguien te va a vender la LLC como si fuera un cupón de descuento fiscal: abres la empresa y, por arte de magia, dejas de pagar impuestos. Te lo digo de frente: <strong>eso no existe</strong>. La LLC es una figura legal para organizar un negocio — separa tu empresa de tu persona y le da forma ante el estado. Lo que no es, ni nunca fue, es un beneficio de impuestos automático.</p>
+          <h2>Cuándo el cero por ciento sí es real</h2>
+          <p>Ahora, la parte que los vendedores de humo no inventaron del todo: hay un escenario donde el impuesto federal sobre ese ingreso sí es cero. Pero fíjate bien, porque se tienen que cumplir <strong>las tres condiciones al mismo tiempo</strong>: eres extranjero, no tienes ninguna presencia física en Estados Unidos — ni empleados ni oficina — y tus ingresos vienen de fuera del país. Cuando esas tres piezas encajan, ese ingreso extranjero no paga impuesto federal. Ni una más, ni una menos: las tres.</p>
+          <h2>Cuándo se cae</h2>
+          <p>En cuanto falta una de las condiciones, el cuento cambia por completo. Si tu empresa <strong>opera dentro de Estados Unidos</strong>, con empleados, oficina o actividad en el país, tributa como lo que es: un negocio americano más, con sus impuestos como cualquier otro.</p>
+          <p>Y si <strong>tú vives en Estados Unidos</strong>, hay otra regla que tienes que conocer: para efectos de impuestos, tu LLC es transparente. El ingreso de la empresa no se queda “en la empresa” — pasa directo a tu declaración personal, y pagas como persona sobre lo que el negocio ganó. Nada de cero por ciento por el solo hecho de tener las siglas LLC después del nombre.</p>
+          <h2>Lo que nunca desaparece: reportar</h2>
+          <p>Esta es la parte que casi nadie te cuenta al venderte la empresa, y es la más importante de todo el artículo. Aunque tu impuesto a pagar sea cero, <strong>reportar es obligatorio</strong>. Una LLC de un solo dueño extranjero presenta cada año el <strong>Formulario 5472 junto con el formulario 1120</strong>, contándole al IRS quién es el dueño y qué movimientos hubo.</p>
+          <p>¿Y si no se presenta? La multa por no entregar el 5472 es de <strong>25,000 dólares</strong>. Léelo otra vez: veinticinco mil dólares, por un formulario que no debías impuestos al entregar. Esos reportes los prepara y presenta un contador — no es un trámite para improvisar — pero mi trabajo aquí es que lo sepas <strong>antes</strong> de formar tu empresa, no después de la primera multa.</p>
+        </div>
+        <div class="takeaway">
+          <p class="t-label">La idea que importa</p>
+          <p>El cero por ciento no lo da la LLC. Lo da tu situación. Y reportar es obligatorio, aunque el impuesto sea cero.</p>
+        </div>
+        <div class="article-disclaimer" role="note">
+          <p><strong>Aviso importante:</strong> Este artículo es contenido educativo e información general. No es asesoría legal, fiscal, contable ni financiera, y leerlo no crea una relación abogado-cliente ni ninguna relación profesional. Emma Morgan no es un bufete de abogados, ni abogada, ni contadora pública (CPA), ni asesora fiscal. Las leyes, los requisitos, los costos y los plazos cambian y varían según el estado y el país: verifica siempre la información con las fuentes oficiales y consulta a un abogado o contador licenciado en tu jurisdicción antes de decidir o actuar con base en este contenido. Las fuentes y citas mencionadas son solo de referencia, no implican respaldo, y no garantizamos la exactitud del contenido de terceros. En la máxima medida permitida por la ley, Emma Morgan no asume responsabilidad por pérdidas o daños que surjan del uso de este artículo o de la confianza en su contenido; si alguna responsabilidad no pudiera excluirse, queda limitada al monto pagado por el servicio que dio origen al reclamo, y quedan excluidos los daños indirectos, consecuentes y punitivos. Los resultados nunca están garantizados.</p>
+        </div>
+        <div class="article-close">
+          <p>Sígueme — y si tienes alguna pregunta, escríbeme. Sin ningún compromiso, miraré cómo te puedo ayudar.</p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="mailto:emma@emmamorganpartner.com?subject=Tengo%20una%20pregunta%20%2F%20I%20have%20a%20question">Escríbeme</a>
+            <a class="btn btn-ghost" href="/#servicios">Ver los servicios</a>
+            <a class="btn btn-ghost" href="/#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </article>
+    </main>
+<footer>
+      <div class="wrap">
+        <p>© 2026 Emma Morgan · Boston, MA</p>
+        <p data-en="Educational content and general information — not legal, tax, or financial advice. Your case deserves its own look." data-es="Contenido educativo e información general — no es asesoría legal, fiscal ni financiera. Tu caso merece su propia revisión." data-pt="Conteúdo educacional e informações gerais — não é assessoria legal, fiscal nem financeira. O seu caso merece uma análise própria.">Educational content and general information — not legal, tax, or financial advice. Your case deserves its own look.</p>
+      </div>
+      <div class="wrap legal-wrap">
+        <p class="legal-disclaimer" data-en="Emma Morgan provides business formation support, document preparation, and online presence services. I am not a law firm, an attorney, a CPA, or a tax advisor. Nothing on this site is legal, tax, or financial advice, and using these services creates no attorney-client or professional relationship. The information here is general education — you choose your entity, and you remain responsible for the accuracy of your information and for your licenses, taxes, and deadlines. Results, approvals, rankings, and income are never guaranteed. Where liability is established, it is limited to the amount paid for the service that gave rise to the claim, and indirect, consequential, and punitive damages are excluded to the fullest extent permitted by law." data-es="Emma Morgan ofrece apoyo en la formación de empresas, preparación de documentos y servicios de presencia en línea. No soy un bufete de abogados, ni abogada, ni contadora pública (CPA), ni asesora fiscal. Nada en este sitio es asesoría legal, fiscal o financiera, y el uso de estos servicios no crea ninguna relación abogado-cliente ni relación profesional. La información aquí es educación general: tú eliges tu tipo de empresa y sigues siendo responsable de la exactitud de tu información y de tus licencias, impuestos y plazos. Los resultados, las aprobaciones, los rankings y los ingresos nunca están garantizados. Cuando se establezca responsabilidad, esta se limita al monto pagado por el servicio que dio origen al reclamo, y los daños indirectos, consecuentes y punitivos quedan excluidos en la máxima medida permitida por la ley." data-pt="Emma Morgan oferece apoio na formação de empresas, preparação de documentos e serviços de presença online. Não sou um escritório de advocacia, nem advogada, nem contadora (CPA), nem consultora fiscal. Nada neste site é aconselhamento jurídico, fiscal ou financeiro, e o uso destes serviços não cria nenhuma relação advogado-cliente nem relação profissional. As informações aqui são educação geral: você escolhe o tipo da sua empresa e continua responsável pela exatidão das suas informações e pelas suas licenças, impostos e prazos. Resultados, aprovações, rankings e renda nunca são garantidos. Quando houver responsabilidade comprovada, ela se limita ao valor pago pelo serviço que deu origem à reclamação, e danos indiretos, consequentes e punitivos ficam excluídos na máxima extensão permitida por lei.">Emma Morgan provides business formation support, document preparation, and online presence services. I am not a law firm, an attorney, a CPA, or a tax advisor. Nothing on this site is legal, tax, or financial advice, and using these services creates no attorney-client or professional relationship. The information here is general education — you choose your entity, and you remain responsible for the accuracy of your information and for your licenses, taxes, and deadlines. Results, approvals, rankings, and income are never guaranteed. Where liability is established, it is limited to the amount paid for the service that gave rise to the claim, and indirect, consequential, and punitive damages are excluded to the fullest extent permitted by law.</p>
+      </div>
+    </footer>
+  </body>
+</html>

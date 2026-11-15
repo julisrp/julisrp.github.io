@@ -39,6 +39,28 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Cómo abrir una LLC sin seguro social?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí puedes. No necesitas seguro social, ni visa, ni viajar a Estados Unidos. Necesitas tres cosas: tu pasaporte vigente, un agente registrado en el estado donde formas la empresa, y el EIN de la empresa, que se pide por la ruta de extranjeros." }
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Una LLC paga 0% impuestos?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Solo en un caso específico: si eres extranjero, no tienes empleados ni oficina en Estados Unidos y tu ingreso viene de fuera del país, ese ingreso no paga impuesto federal. En cualquier otro caso la LLC tributa como cualquier negocio. Y en todos los casos, sin excepción, reportar es obligatorio." }
+      }]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -293,19 +315,71 @@
         .services { grid-template-columns: 1fr; }
         nav.main { margin-left: 0; }
       }
+
+      /* Articles */
+      [hidden] { display: none !important; }
+      .articles-head { padding: 52px 0 8px; }
+      .articles-head h1 { font-size: clamp(2rem, 4.6vw, 3rem); font-weight: 700; max-width: 20em; }
+      .articles-head p { margin-top: 14px; color: var(--ink-soft); font-size: 1.1rem; max-width: 38em; }
+      .article-cards { display: grid; gap: 20px; padding: 28px 0 64px; max-width: 860px; }
+      .article-card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 28px 30px;
+        display: block; text-decoration: none; color: inherit;
+      }
+      .article-card:hover { border-color: var(--accent); }
+      .article-card .a-date { font-size: .85rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); }
+      .article-card h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); margin-top: 10px; }
+      .article-card .a-sum { margin-top: 10px; color: var(--ink-soft); font-size: 1.05rem; }
+      .article-card .a-read { margin-top: 16px; font-weight: 700; color: var(--accent-ink); }
+      .article-page { padding: 48px 0 64px; }
+      .article-inner { max-width: 760px; }
+      .back-link { font-weight: 600; font-size: .98rem; text-decoration: none; }
+      .article-meta { margin-top: 26px; font-size: .88rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); }
+      .article-page h1 { font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700; margin-top: 12px; }
+      .direct-answer {
+        margin-top: 26px; background: var(--navy); color: var(--navy-ink);
+        border-radius: 14px; padding: 26px 28px;
+      }
+      .direct-answer .da-label { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+      .direct-answer p { margin-top: 10px; font-size: 1.14rem; line-height: 1.6; }
+      .article-body { margin-top: 10px; }
+      .article-body h2 { font-size: 1.5rem; margin-top: 36px; }
+      .article-body p { margin-top: 12px; color: var(--ink-soft); font-size: 1.08rem; }
+      .article-body p strong { color: var(--ink); }
+      .takeaway {
+        margin-top: 40px; background: var(--surface); border: 1px solid var(--line);
+        border-left: 4px solid var(--gold); border-radius: 12px; padding: 24px 26px;
+      }
+      .takeaway .t-label { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink); }
+      .takeaway p { margin-top: 10px; font-family: "Lora", Georgia, serif; font-style: italic; font-size: 1.22rem; line-height: 1.5; }
+      .article-close { margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px 28px; text-align: center; }
+      .article-close p { font-size: 1.1rem; }
+      .article-close .cta-row { justify-content: center; margin-top: 20px; }
+      .article-disclaimer {
+        margin-top: 32px; background: var(--surface); border: 1px solid var(--line);
+        border-left: 4px solid var(--accent); border-radius: 12px; padding: 22px 24px;
+      }
+      .article-disclaimer p { font-size: .98rem; line-height: 1.65; color: var(--ink-soft); }
+      .article-disclaimer strong { color: var(--ink); }
+      @media (max-width: 560px) {
+        .article-card, .direct-answer, .article-close, .article-disclaimer { padding: 22px 20px; }
+        .articles-head { padding-top: 34px; }
+        .article-page { padding-top: 30px; }
+      }
     </style>
   </head>
   <body>
     <header class="topbar">
       <div class="wrap topbar-in">
-        <a class="brand" href="#top">Emma <span>Morgan</span></a>
+        <a class="brand" href="/">Emma <span>Morgan</span></a>
         <nav class="main" aria-label="Main">
-          <a href="#crear" data-en="Start a business" data-es="Crear tu negocio" data-pt="Criar seu negócio">Start a business</a>
-          <a href="#presencia" data-en="Grow your presence" data-es="Crecer tu presencia" data-pt="Crescer sua presença">Grow your presence</a>
-          <a href="#servicios" data-en="Services" data-es="Servicios" data-pt="Serviços">Services</a>
-          <a href="#como" data-en="How I work" data-es="Cómo trabajo" data-pt="Como trabalho">How I work</a>
-          <a href="#preguntas" data-en="Questions" data-es="Preguntas" data-pt="Perguntas">Questions</a>
-          <a href="#contacto" data-en="Contact" data-es="Contacto" data-pt="Contato">Contact</a>
+          <a href="/#crear" data-en="Start a business" data-es="Crear tu negocio" data-pt="Criar seu negócio">Start a business</a>
+          <a href="/#presencia" data-en="Grow your presence" data-es="Crecer tu presencia" data-pt="Crescer sua presença">Grow your presence</a>
+          <a href="/#servicios" data-en="Services" data-es="Servicios" data-pt="Serviços">Services</a>
+          <a href="/#como" data-en="How I work" data-es="Cómo trabajo" data-pt="Como trabalho">How I work</a>
+          <a href="/#preguntas" data-en="Questions" data-es="Preguntas" data-pt="Perguntas">Questions</a>
+          <a href="/articulos/" data-en="Articles" data-es="Artículos" data-pt="Artigos">Articles</a>
+          <a href="/#contacto" data-en="Contact" data-es="Contacto" data-pt="Contato">Contact</a>
         </nav>
         <div class="lang-toggle" role="group" aria-label="Language / Idioma / Língua">
           <button type="button" id="btn-en" aria-pressed="true" aria-label="English" title="English"><svg viewBox="0 0 26 19" width="26" height="19" aria-hidden="true" focusable="false"><clipPath id="fus"><rect width="26" height="19" rx="2.5"/></clipPath><g clip-path="url(#fus)"><rect width="26" height="19" fill="#ffffff"/><g fill="#b22234"><rect width="26" height="1.47"/><rect y="2.92" width="26" height="1.47"/><rect y="5.85" width="26" height="1.47"/><rect y="8.77" width="26" height="1.47"/><rect y="11.69" width="26" height="1.47"/><rect y="14.62" width="26" height="1.47"/><rect y="17.54" width="26" height="1.47"/></g><rect width="12" height="10.23" fill="#3c3b6e"/><g fill="#ffffff"><circle cx="2" cy="2.1" r=".62"/><circle cx="5" cy="2.1" r=".62"/><circle cx="8" cy="2.1" r=".62"/><circle cx="11" cy="2.1" r=".62"/><circle cx="2" cy="5" r=".62"/><circle cx="5" cy="5" r=".62"/><circle cx="8" cy="5" r=".62"/><circle cx="11" cy="5" r=".62"/><circle cx="2" cy="7.9" r=".62"/><circle cx="5" cy="7.9" r=".62"/><circle cx="8" cy="7.9" r=".62"/><circle cx="11" cy="7.9" r=".62"/></g></g></svg></button>
@@ -373,7 +447,7 @@
           <div class="bridge">
             <h3 data-en="Already have your LLC. Now what?" data-es="Ya tienes tu LLC. ¿Y ahora qué?" data-pt="Você já tem sua LLC. E agora?">Already have your LLC. Now what?</h3>
             <p data-en="Formation is the first rung, not the finish line. When your company exists, the work changes: be findable, look credible, answer customers, keep the books of your day in order. That is path two — and it is where a one-time start becomes a growing business." data-es="Formar la empresa es el primer escalón, no la meta. Cuando tu empresa ya existe, el trabajo cambia: que te encuentren, verte creíble, responder a los clientes, llevar el día en orden. Ese es el camino dos — y ahí es donde un comienzo se convierte en un negocio que crece." data-pt="Formar a empresa é o primeiro degrau, não a linha de chegada. Quando sua empresa já existe, o trabalho muda: ser encontrado, parecer confiável, responder aos clientes, manter o dia a dia em ordem. Esse é o caminho dois — e é aí que um começo se transforma em um negócio que cresce.">Formation is the first rung, not the finish line. When your company exists, the work changes: be findable, look credible, answer customers, keep the books of your day in order. That is path two — and it is where a one-time start becomes a growing business.</p>
-            <a class="btn" href="#presencia" data-en="See path two" data-es="Ver el camino dos" data-pt="Ver o caminho dois">See path two</a>
+            <a class="btn" href="/#presencia" data-en="See path two" data-es="Ver el camino dos" data-pt="Ver o caminho dois">See path two</a>
           </div>
         </div>
       </section>
@@ -431,7 +505,7 @@
               <p class="price" data-en="Quoted per project" data-es="Cotizado por proyecto" data-pt="Orçamento por projeto">Quoted per project</p>
               <p class="desc" data-en="Research and spreadsheets, inbox and customer email support, writing and editing — in English, Spanish, or Portuguese." data-es="Investigación y hojas de cálculo, apoyo con el correo y la atención al cliente, redacción y edición — en inglés, español o portugués." data-pt="Pesquisa e planilhas, suporte de e-mail e atendimento ao cliente, redação e edição — em inglês, espanhol ou português.">Research and spreadsheets, inbox and customer email support, writing and editing — in English, Spanish, or Portuguese.</p>
             </article>
-            <a class="service" href="#crear">
+            <a class="service" href="/#crear">
               <h3 data-en="For founders" data-es="Para quienes empiezan" data-pt="Para quem está começando">For founders</h3>
               <p class="price" data-en="Formation package · $399" data-es="Paquete de formación · $399" data-pt="Pacote de formação · $399">Formation package · $399</p>
               <p class="desc" data-en="Starting a business? Formation package $399 — see Crear tu negocio above." data-es="¿Vas a crear tu negocio? Paquete de formación $399 — mira Crear tu negocio arriba." data-pt="Vai criar seu negócio? Pacote de formação $399 — veja Criar seu negócio acima.">Starting a business? Formation package $399 — see Crear tu negocio above.</p>
@@ -653,6 +727,112 @@
       </section>
     </main>
 
+    <!-- ARTICLES INDEX -->
+    <div id="view-articulos" hidden>
+      <div class="wrap">
+        <div class="articles-head">
+          <h1 data-en="Articles — Clear answers to start and grow your business" data-es="Artículos — Respuestas claras para crear y crecer tu negocio" data-pt="Artigos — Respostas claras para criar e fazer crescer o seu negócio">Articles — Clear answers to start and grow your business</h1>
+          <p data-en="The same questions I answer in my videos, written out in full — so you can read them, save them, and come back whenever you need them. One question per article, answered straight." data-es="Las mismas preguntas que respondo en mis videos, escritas completas — para que puedas leerlas, guardarlas y volver a ellas cuando las necesites. Una pregunta por artículo, respondida de frente." data-pt="As mesmas perguntas que respondo nos meus vídeos, escritas por completo — para você ler, salvar e voltar a elas quando precisar. Uma pergunta por artigo, respondida direto ao ponto.">The same questions I answer in my videos, written out in full — so you can read them, save them, and come back whenever you need them. One question per article, answered straight.</p>
+        </div>
+        <div class="article-cards">
+          <a class="article-card" href="/articulos/como-abrir-una-llc-sin-seguro-social.html">
+            <p class="a-date">15 de noviembre de 2026</p>
+            <h2 data-en="How can I open an LLC without a Social Security number?" data-es="¿Cómo abrir una LLC sin seguro social?" data-pt="Como abrir uma LLC sem Social Security?">How can I open an LLC without a Social Security number?</h2>
+            <p class="a-sum" data-en="Passport, registered agent, and EIN: the only three requirements, in the right order — no visa and no trip required." data-es="Pasaporte, agente registrado y EIN: los únicos tres requisitos, en el orden correcto — sin visa y sin viajar." data-pt="Passaporte, agente registrado e EIN: os únicos três requisitos, na ordem certa — sem visto e sem viajar.">Passport, registered agent, and EIN: the only three requirements, in the right order — no visa and no trip required.</p>
+            <p class="a-read" data-en="Read the article →" data-es="Leer el artículo →" data-pt="Ler o artigo →">Read the article →</p>
+          </a>
+          <a class="article-card" href="/articulos/llc-cero-impuestos.html">
+            <p class="a-date">15 de noviembre de 2026</p>
+            <h2 data-en="Does an LLC pay 0% in taxes?" data-es="¿Una LLC paga 0% impuestos?" data-pt="Uma LLC paga 0% de impostos?">Does an LLC pay 0% in taxes?</h2>
+            <p class="a-sum" data-en="When the zero percent is real, when it falls apart, and the yearly filing nobody is allowed to skip." data-es="Cuándo el cero por ciento es real, cuándo se cae, y el reporte anual que nadie se puede saltar." data-pt="Quando o zero por cento é real, quando ele cai, e a declaração anual que ninguém pode pular.">When the zero percent is real, when it falls apart, and the yearly filing nobody is allowed to skip.</p>
+            <p class="a-read" data-en="Read the article →" data-es="Leer el artículo →" data-pt="Ler o artigo →">Read the article →</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARTICLE 1 -->
+    <article id="view-articulo-1" class="article-page" hidden>
+      <div class="wrap article-inner">
+        <a class="back-link" href="/articulos/">← Todos los artículos</a>
+        <p class="article-meta">Emma Morgan · 15 de noviembre de 2026</p>
+        <h1>¿Cómo abrir una LLC sin seguro social?</h1>
+        <div class="direct-answer">
+          <p class="da-label">Respuesta directa</p>
+          <p>Sí puedes. No necesitas seguro social, ni visa, ni viajar a Estados Unidos. Necesitas tres cosas: tu pasaporte vigente, un agente registrado en el estado donde formas la empresa, y el EIN de la empresa, que se pide por la ruta de extranjeros.</p>
+        </div>
+        <div class="article-body">
+          <h2>Lo que necesitas, y nada más</h2>
+          <p>Empecemos por quitar el miedo: formar una LLC no te pide un número de seguro social. Tu identificación es tu <strong>pasaporte vigente</strong>, el de tu país, y con eso basta para firmar la formación. Tampoco necesitas un ITIN para este paso — ese número personal tiene otros usos, pero abrir la empresa no es uno de ellos.</p>
+          <p>La segunda pieza es el <strong>agente registrado</strong>. Todos los estados lo exigen, sin excepción. Es una persona o una empresa con una dirección física dentro del estado donde formas tu LLC, encargada de recibir los documentos oficiales y avisos legales de tu empresa. No es un socio, no es dueño de nada: es el domicilio oficial donde el estado puede encontrar a tu negocio.</p>
+          <p>Y un consejo que vale dinero: <strong>elige el estado pensando en tu operación</strong> — dónde están tus clientes, dónde vas a trabajar, dónde tiene sentido tu mercado. Formar en el estado “más barato” y operar en otro suele terminar en doble registro y doble gasto. La tarifa más baja rara vez es el camino más corto.</p>
+          <h2>El EIN sin seguro social</h2>
+          <p>El EIN es el número con el que tu empresa existe ante el IRS: su identificación para impuestos, separada de ti como persona. Quien tiene seguro social o ITIN lo pide en línea en minutos. Tu ruta es distinta, pero igual de válida: se llena el <strong>formulario SS-4</strong>, se escribe «Foreign» en la línea 7b — donde iría el número personal que no tienes — y se envía por fax al IRS.</p>
+          <p>Sí, tarda más que la ruta en línea. Semanas, no minutos. Pero es <strong>gratis</strong> y es el camino normal que usan miles de fundadores extranjeros cada año; no es un favor ni una excepción. Y escúchame bien en esto: el EIN en sí no tiene precio. Si alguien te ayuda con el trámite, te cobra su trabajo — el número lo emite el IRS sin costo, siempre.</p>
+          <h2>Lo que no necesitas</h2>
+          <p>La lista de lo que sobra es más larga que la de lo que hace falta. <strong>No necesitas una visa</strong>: una LLC no es un documento migratorio y tener una empresa no cambia tu estatus. <strong>No necesitas viajar</strong>: todo el proceso se puede hacer a distancia, desde tu país. <strong>No necesitas un socio americano</strong>: puedes ser el único dueño, con el cien por ciento de la empresa. Y como ya viste, <strong>no necesitas ITIN para formar</strong> — si más adelante tu caso lo requiere para otra cosa, eso se mira en su momento, con calma.</p>
+          <h2>El orden correcto</h2>
+          <p>La mayoría de los retrasos que veo no vienen de los requisitos, vienen del desorden. El orden que funciona es este: <strong>primero eliges el estado, después formas la LLC, luego pides el EIN, y con el EIN en mano abres la cuenta bancaria del negocio</strong>. Cada paso alimenta al siguiente — el banco te va a pedir el EIN, y el EIN se pide a nombre de una empresa que ya existe.</p>
+          <p>Hazlo en ese orden y el proceso avanza sin tropiezos. Saltarte pasos, en cambio, es la manera más segura de perder semanas esperando un papel que todavía no podías pedir.</p>
+        </div>
+        <div class="takeaway">
+          <p class="t-label">La idea que importa</p>
+          <p>Formar una LLC sin seguro social no es un truco: es un trámite con tres requisitos y un orden. Pasaporte, agente registrado y EIN.</p>
+        </div>
+        <div class="article-disclaimer" role="note">
+          <p><strong>Aviso importante:</strong> Este artículo es contenido educativo e información general. No es asesoría legal, fiscal, contable ni financiera, y leerlo no crea una relación abogado-cliente ni ninguna relación profesional. Emma Morgan no es un bufete de abogados, ni abogada, ni contadora pública (CPA), ni asesora fiscal. Las leyes, los requisitos, los costos y los plazos cambian y varían según el estado y el país: verifica siempre la información con las fuentes oficiales y consulta a un abogado o contador licenciado en tu jurisdicción antes de decidir o actuar con base en este contenido. Las fuentes y citas mencionadas son solo de referencia, no implican respaldo, y no garantizamos la exactitud del contenido de terceros. En la máxima medida permitida por la ley, Emma Morgan no asume responsabilidad por pérdidas o daños que surjan del uso de este artículo o de la confianza en su contenido; si alguna responsabilidad no pudiera excluirse, queda limitada al monto pagado por el servicio que dio origen al reclamo, y quedan excluidos los daños indirectos, consecuentes y punitivos. Los resultados nunca están garantizados.</p>
+        </div>
+        <div class="article-close">
+          <p>Sígueme — y si tienes alguna pregunta, escríbeme. Sin ningún compromiso, miraré cómo te puedo ayudar.</p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="mailto:emma@emmamorganpartner.com?subject=Tengo%20una%20pregunta%20%2F%20I%20have%20a%20question">Escríbeme</a>
+            <a class="btn btn-ghost" href="/#servicios">Ver los servicios</a>
+            <a class="btn btn-ghost" href="/#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ARTICLE 2 -->
+    <article id="view-articulo-2" class="article-page" hidden>
+      <div class="wrap article-inner">
+        <a class="back-link" href="/articulos/">← Todos los artículos</a>
+        <p class="article-meta">Emma Morgan · 15 de noviembre de 2026</p>
+        <h1>¿Una LLC paga 0% impuestos?</h1>
+        <div class="direct-answer">
+          <p class="da-label">Respuesta directa</p>
+          <p>Solo en un caso específico: si eres extranjero, no tienes empleados ni oficina en Estados Unidos y tu ingreso viene de fuera del país, ese ingreso no paga impuesto federal. En cualquier otro caso la LLC tributa como cualquier negocio. Y en todos los casos, sin excepción, reportar es obligatorio.</p>
+        </div>
+        <div class="article-body">
+          <h2>El mito</h2>
+          <p>Si pasas suficiente tiempo en redes, tarde o temprano alguien te va a vender la LLC como si fuera un cupón de descuento fiscal: abres la empresa y, por arte de magia, dejas de pagar impuestos. Te lo digo de frente: <strong>eso no existe</strong>. La LLC es una figura legal para organizar un negocio — separa tu empresa de tu persona y le da forma ante el estado. Lo que no es, ni nunca fue, es un beneficio de impuestos automático.</p>
+          <h2>Cuándo el cero por ciento sí es real</h2>
+          <p>Ahora, la parte que los vendedores de humo no inventaron del todo: hay un escenario donde el impuesto federal sobre ese ingreso sí es cero. Pero fíjate bien, porque se tienen que cumplir <strong>las tres condiciones al mismo tiempo</strong>: eres extranjero, no tienes ninguna presencia física en Estados Unidos — ni empleados ni oficina — y tus ingresos vienen de fuera del país. Cuando esas tres piezas encajan, ese ingreso extranjero no paga impuesto federal. Ni una más, ni una menos: las tres.</p>
+          <h2>Cuándo se cae</h2>
+          <p>En cuanto falta una de las condiciones, el cuento cambia por completo. Si tu empresa <strong>opera dentro de Estados Unidos</strong>, con empleados, oficina o actividad en el país, tributa como lo que es: un negocio americano más, con sus impuestos como cualquier otro.</p>
+          <p>Y si <strong>tú vives en Estados Unidos</strong>, hay otra regla que tienes que conocer: para efectos de impuestos, tu LLC es transparente. El ingreso de la empresa no se queda “en la empresa” — pasa directo a tu declaración personal, y pagas como persona sobre lo que el negocio ganó. Nada de cero por ciento por el solo hecho de tener las siglas LLC después del nombre.</p>
+          <h2>Lo que nunca desaparece: reportar</h2>
+          <p>Esta es la parte que casi nadie te cuenta al venderte la empresa, y es la más importante de todo el artículo. Aunque tu impuesto a pagar sea cero, <strong>reportar es obligatorio</strong>. Una LLC de un solo dueño extranjero presenta cada año el <strong>Formulario 5472 junto con el formulario 1120</strong>, contándole al IRS quién es el dueño y qué movimientos hubo.</p>
+          <p>¿Y si no se presenta? La multa por no entregar el 5472 es de <strong>25,000 dólares</strong>. Léelo otra vez: veinticinco mil dólares, por un formulario que no debías impuestos al entregar. Esos reportes los prepara y presenta un contador — no es un trámite para improvisar — pero mi trabajo aquí es que lo sepas <strong>antes</strong> de formar tu empresa, no después de la primera multa.</p>
+        </div>
+        <div class="takeaway">
+          <p class="t-label">La idea que importa</p>
+          <p>El cero por ciento no lo da la LLC. Lo da tu situación. Y reportar es obligatorio, aunque el impuesto sea cero.</p>
+        </div>
+        <div class="article-disclaimer" role="note">
+          <p><strong>Aviso importante:</strong> Este artículo es contenido educativo e información general. No es asesoría legal, fiscal, contable ni financiera, y leerlo no crea una relación abogado-cliente ni ninguna relación profesional. Emma Morgan no es un bufete de abogados, ni abogada, ni contadora pública (CPA), ni asesora fiscal. Las leyes, los requisitos, los costos y los plazos cambian y varían según el estado y el país: verifica siempre la información con las fuentes oficiales y consulta a un abogado o contador licenciado en tu jurisdicción antes de decidir o actuar con base en este contenido. Las fuentes y citas mencionadas son solo de referencia, no implican respaldo, y no garantizamos la exactitud del contenido de terceros. En la máxima medida permitida por la ley, Emma Morgan no asume responsabilidad por pérdidas o daños que surjan del uso de este artículo o de la confianza en su contenido; si alguna responsabilidad no pudiera excluirse, queda limitada al monto pagado por el servicio que dio origen al reclamo, y quedan excluidos los daños indirectos, consecuentes y punitivos. Los resultados nunca están garantizados.</p>
+        </div>
+        <div class="article-close">
+          <p>Sígueme — y si tienes alguna pregunta, escríbeme. Sin ningún compromiso, miraré cómo te puedo ayudar.</p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="mailto:emma@emmamorganpartner.com?subject=Tengo%20una%20pregunta%20%2F%20I%20have%20a%20question">Escríbeme</a>
+            <a class="btn btn-ghost" href="/#servicios">Ver los servicios</a>
+            <a class="btn btn-ghost" href="/#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <footer>
       <div class="wrap">
         <p>© 2026 Emma Morgan · Boston, MA</p>
@@ -685,6 +865,45 @@
         var navLang = (navigator.language || "").toLowerCase();
         if (navLang.indexOf("es") === 0) setLang("es");
         else if (navLang.indexOf("pt") === 0) setLang("pt");
+      })();
+    </script>
+    <script>
+      (function () {
+        var home = document.querySelector("main");
+        var views = {
+          articulos: document.getElementById("view-articulos"),
+          a1: document.getElementById("view-articulo-1"),
+          a2: document.getElementById("view-articulo-2")
+        };
+        var baseTitle = document.title;
+        var titles = {
+          home: baseTitle,
+          articulos: "Artículos — Respuestas claras para crear y crecer tu negocio | Emma Morgan",
+          a1: "¿Cómo abrir una LLC sin seguro social? | Emma Morgan",
+          a2: "¿Una LLC paga 0% impuestos? | Emma Morgan"
+        };
+        function route() {
+          var hash = location.hash || "";
+          var key = "home";
+          if (hash === "#/articulos") key = "articulos";
+          else if (hash === "#/articulos/como-abrir-una-llc-sin-seguro-social") key = "a1";
+          else if (hash === "#/articulos/llc-cero-impuestos") key = "a2";
+          home.hidden = key !== "home";
+          views.articulos.hidden = key !== "articulos";
+          views.a1.hidden = key !== "a1";
+          views.a2.hidden = key !== "a2";
+          document.title = titles[key];
+          if (key !== "home") {
+            window.scrollTo(0, 0);
+          } else if (hash.length > 1 && hash.charAt(1) !== "/") {
+            var target = document.querySelector(hash);
+            if (target) {
+              setTimeout(function () { target.scrollIntoView(); }, 30);
+            }
+          }
+        }
+        window.addEventListener("hashchange", route);
+        route();
       })();
     </script>
   </body>
