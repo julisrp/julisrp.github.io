@@ -89,6 +89,72 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el estado más barato para tener una LLC?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Para formarla, Montana ($35) y Kentucky ($40). Para mantenerla, Arizona, New Mexico y Missouri: $50 para formar y $0 al año, porque no piden reporte anual. La cuenta completa es formación + años de mantenimiento + tu agente registrado." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Y el más caro?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Massachusetts: $500 para formar y $500 cada año. En costo anual, California compite: su tarifa de formación es solo $70, pero cobra $800 al año de impuesto de franquicia aunque no vendas nada." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo formar en Wyoming y operar en New Jersey?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Puedes, pero no te ahorra nada: New Jersey te exige registrar esa LLC como empresa extranjera ($100) y pagar su reporte anual ($75), encima de los $100 + $60 de Wyoming. Dos estados, dos pagos, dos reportes. Por eso la regla: forma donde operas." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta el agente registrado?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Si vives en el estado y puedes recibir documentos en horario laboral, puedes ser tu propio agente y cuesta $0. Un servicio comercial de agente registrado cuesta normalmente entre $35 y $300 al año, según el estado y lo que incluya." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El EIN cuesta algo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. El EIN es gratis, siempre, directo con el IRS. Si alguien te quiere cobrar por “sacar el EIN”, te está cobrando por llenar un formulario gratuito." }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the cheapest state to have an LLC in?",
+          "acceptedAnswer": { "@type": "Answer", "text": "To form one, Montana ($35) and Kentucky ($40). To keep one, Arizona, New Mexico, and Missouri: $50 to form and $0 a year, because they require no annual report. The full math is formation + years of upkeep + your registered agent." }
+        },
+        {
+          "@type": "Question",
+          "name": "And the most expensive?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Massachusetts: $500 to form and $500 every year. On yearly cost, California competes: its formation fee is only $70, but it charges $800 a year in franchise tax even if you sell nothing." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I form in Wyoming and operate in New Jersey?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You can, but it saves you nothing: New Jersey requires you to register that LLC as a foreign business ($100) and pay its annual report ($75), on top of Wyoming's $100 + $60. Two states, two payments, two reports. That's the rule: form where you operate." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a registered agent cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If you live in the state and can receive documents during business hours, you can be your own agent and it costs $0. A commercial registered agent service typically runs $35–$300 a year, depending on the state and what's included." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the EIN cost anything?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The EIN is free, always, directly from the IRS. If someone wants to charge you to “get your EIN,” they're charging you to fill out a free form." }
+        }
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -376,6 +442,13 @@
       .direct-answer p { margin-top: 10px; font-size: 1.14rem; line-height: 1.6; }
       .article-body { margin-top: 10px; }
       .article-body h2 { font-size: 1.5rem; margin-top: 36px; }
+      .article-body h3 { font-size: 1.28rem; margin-top: 30px; color: var(--ink); }
+      .article-body .table-scroll { overflow-x: auto; margin-top: 16px; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+      .article-body table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .98rem; line-height: 1.5; }
+      .article-body th, .article-body td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; }
+      .article-body tbody tr:last-child td { border-bottom: 0; }
+      .article-body thead th { color: var(--ink); font-weight: 700; border-bottom: 2px solid var(--line); background: var(--surface); }
+      .article-body td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
       .article-body p { margin-top: 12px; color: var(--ink-soft); font-size: 1.08rem; }
       .article-body p strong { color: var(--ink); }
       .article-body ul, .article-body ol { margin: 12px 0 0; padding-left: 24px; color: var(--ink-soft); font-size: 1.08rem; display: grid; gap: 10px; }
@@ -782,6 +855,12 @@
             <p class="a-sum" data-en="When the zero percent is real, when it falls apart, and the yearly filing nobody is allowed to skip." data-es="Cuándo el cero por ciento es real, cuándo se cae, y el reporte anual que nadie se puede saltar." data-pt="Quando o zero por cento é real, quando ele cai, e a declaração anual que ninguém pode pular.">When the zero percent is real, when it falls apart, and the yearly filing nobody is allowed to skip.</p>
             <p class="a-read" data-en="Read the article →" data-es="Leer el artículo →" data-pt="Ler o artigo →">Read the article →</p>
           </a>
+          <a class="article-card" href="/articulos/cuanto-cuesta-una-llc-en-usa.html">
+            <p class="a-date">17 de noviembre de 2026</p>
+            <h2 data-en="How Much Does an LLC Cost in the US? The 15 States Where Most Businesses Incorporate — and the 10 Most Convenient" data-es="¿Cuánto cuesta una LLC en USA? Los 15 estados donde más empresas se forman — y los 10 más convenientes" data-pt="Quanto custa uma LLC nos EUA? Os 15 estados onde mais empresas são formadas — e os 10 mais convenientes">How Much Does an LLC Cost in the US? The 15 States Where Most Businesses Incorporate — and the 10 Most Convenient</h2>
+            <p class="a-sum" data-en="The 15 states where most LLCs are formed, in one table: the price to open an LLC and the price to keep it — plus the full detail on the 10 most convenient states." data-es="Los 15 estados donde más LLC se forman, en una sola tabla: el precio de abrir una LLC y el precio de tenerla — más el detalle completo de los 10 estados más convenientes." data-pt="Os 15 estados onde mais LLCs são formadas, em uma só tabela: o preço de abrir uma LLC e o preço de mantê-la — mais o detalhe completo dos 10 estados mais convenientes.">The 15 states where most LLCs are formed, in one table: the price to open an LLC and the price to keep it — plus the full detail on the 10 most convenient states.</p>
+            <p class="a-read" data-en="Read the article →" data-es="Leer el artículo →" data-pt="Ler o artigo →">Read the article →</p>
+          </a>
         </div>
       </div>
     </div>
@@ -868,6 +947,165 @@
       </div>
     </article>
 
+    <!-- ARTICLE 4 -->
+    <article id="view-articulo-4" class="article-page" hidden>
+      <div class="wrap article-inner">
+        <a class="back-link" href="/articulos/">← Todos los artículos</a>
+        <p class="article-meta">Emma Morgan · 17 de noviembre de 2026</p>
+        <h1>¿Cuánto cuesta una LLC en USA? Los 15 estados donde más empresas se forman — y los 10 más convenientes</h1>
+        <div class="direct-answer">
+          <p class="da-label">Respuesta directa</p>
+          <p>Abrir una LLC cuesta entre $35 y $500 en tarifas del estado, y mantenerla cuesta entre $0 y $800 al año. Esos son los dos números que importan: el de abrirla y el de tenerla.</p>
+        </div>
+        <div class="article-body">
+          <p>En esta página tienes, en una sola tabla, los 15 estados donde más LLC se forman, y el detalle completo de los 10 estados más convenientes para formar la tuya.</p>
+          <p><strong>Información verificada el 17 de noviembre de 2026.</strong> Las tarifas estatales cambian — a veces sin mucho aviso — así que confirma el monto actual en la página oficial de tu estado antes de presentar cualquier documento.</p>
+          <p>Y la regla honesta, antes que nada: <strong>forma tu LLC donde operas.</strong> Si formas en Wyoming pero tu negocio está en New Jersey, vas a pagar en los dos estados: la LLC de Wyoming más el registro como empresa extranjera en New Jersey. Los 10 estados de abajo son para quien de verdad puede escoger — un negocio en línea, sin local ni empleados en un estado fijo. Si operas físicamente en un estado, ese estado casi siempre es tu opción práctica, aunque no sea la más barata.</p>
+          <h2>La tabla: los 15 estados donde más LLC se forman</h2>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th>Estado</th><th>Para formarla</th><th>Cada año (o período)</th><th>Cuándo vence</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Arizona</td><td>$50</td><td>$0 — sin reporte anual</td><td>—</td></tr>
+                <tr><td>California</td><td>$70</td><td>$800 (impuesto de franquicia) + $20 cada 2 años</td><td>15 de abril; reporte en el mes aniversario</td></tr>
+                <tr><td>Colorado</td><td>$50</td><td>$25 (reporte periódico)</td><td>Mes aniversario (ventana de 5 meses)</td></tr>
+                <tr><td>Delaware</td><td>$110</td><td>$400 (impuesto anual de LLC)</td><td>Fecha fija: 1 de junio</td></tr>
+                <tr><td>Florida</td><td>$125</td><td>$138.75</td><td>Ventana: 1 de enero – 1 de mayo</td></tr>
+                <tr><td>Georgia</td><td>$100</td><td>$50 (registro anual)</td><td>Ventana: 1 de enero – 1 de abril</td></tr>
+                <tr><td>Illinois</td><td>$150</td><td>$75</td><td>Antes del mes aniversario</td></tr>
+                <tr><td>Massachusetts</td><td>$500 ($520 en línea)</td><td>$500 ($520 en línea)</td><td>Fecha aniversario</td></tr>
+                <tr><td>Nevada</td><td>$75*</td><td>$350</td><td>Último día del mes aniversario</td></tr>
+                <tr><td>New Jersey</td><td>$100</td><td>$75</td><td>Último día del mes aniversario</td></tr>
+                <tr><td>New York</td><td>$200</td><td>$9 cada 2 años + publicación</td><td>Último día del mes aniversario + publicación</td></tr>
+                <tr><td>North Carolina</td><td>$125</td><td>$200</td><td>Fecha fija: 15 de abril</td></tr>
+                <tr><td>Pennsylvania</td><td>$125</td><td>$7</td><td>Ventana: 1 de enero – 30 de septiembre</td></tr>
+                <tr><td>Texas</td><td>$300</td><td>$0 si facturas hasta $2.65M (reporte obligatorio)</td><td>Fecha fija: 15 de mayo</td></tr>
+                <tr><td>Wyoming</td><td>$100</td><td>$60 mín.</td><td>Primer día del mes aniversario</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>* Nevada: los $75 son solo los Artículos. El día uno pagas $425 en total (ver el detalle abajo).</p>
+          <h2>Los 10 estados más convenientes — el detalle completo</h2>
+          <h3>1. Wyoming — $100 para formar, $60 al año</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $100 (Artículos de Organización, en línea).</li>
+            <li><strong>Cada año:</strong> reporte anual con impuesto de licencia de <strong>$60 mínimo</strong> (o el 0.0002 del valor de tus activos ubicados en Wyoming, lo que sea mayor). Vence el <strong>primer día de tu mes aniversario</strong>.</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en Wyoming. Puede ser una empresa comercial de agente; tu nombre como dueño no sale en los Artículos.</li>
+            <li><strong>Pasos:</strong> 1) Escoge el nombre y verifica que esté libre. 2) Nombra tu agente registrado en Wyoming. 3) Presenta los Artículos en línea y paga los $100. 4) Pide tu EIN gratis en el IRS. 5) Haz tu acuerdo operativo (no se presenta al estado, pero tenlo).</li>
+            <li><strong>Rapidez:</strong> en línea suele aprobarse en 1–3 días hábiles.</li>
+            <li><strong>Ojo:</strong> Wyoming no tiene impuesto estatal sobre la renta, pero eso no mueve tus impuestos del estado donde vives u operas. Y el reporte anual se paga sí o sí, aunque no vendas nada.</li>
+          </ul>
+          <h3>2. Delaware — $110 para formar, $400 fijos al año</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $110 (Certificado de Formación).</li>
+            <li><strong>Cada año:</strong> <strong>impuesto anual de LLC de $400, fijo</strong>, vendas o no vendas. Vence el <strong>1 de junio</strong>. No hay reporte anual. (Subió de $300 a $400 desde el año fiscal 2026 — muchas guías todavía muestran el número viejo.)</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en Delaware.</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad. 2) Agente registrado en Delaware. 3) Presenta el Certificado de Formación y paga los $110. 4) EIN gratis en el IRS. 5) Acuerdo operativo interno.</li>
+            <li><strong>Rapidez:</strong> de los más rápidos; hay servicio el mismo día con costo extra.</li>
+            <li><strong>Ojo:</strong> el atraso del impuesto cuesta $200 de penalidad más 1.5% de interés mensual. Y la fama de Delaware viene de las corporaciones grandes y los inversionistas — para un negocio pequeño que opera en otro estado, casi siempre pagas Delaware <strong>más</strong> tu estado.</li>
+          </ul>
+          <h3>3. Florida — $125 para formar, $138.75 al año</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $125 ($100 de los Artículos + $25 de la designación del agente).</li>
+            <li><strong>Cada año:</strong> reporte anual de <strong>$138.75</strong>, entre el <strong>1 de enero y el 1 de mayo</strong>.</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en Florida. Puedes ser tú mismo si vives en Florida.</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad en Sunbiz. 2) Define tu agente registrado. 3) Presenta los Artículos en línea y paga los $125. 4) EIN gratis en el IRS. 5) Acuerdo operativo interno.</li>
+            <li><strong>Rapidez:</strong> en línea, unos 2–3 días hábiles.</li>
+            <li><strong>Ojo:</strong> el reporte atrasado cuesta <strong>$400 extra</strong> — el total sube a $538.75. Pon la fecha en el calendario el día que formes la LLC.</li>
+          </ul>
+          <h3>4. Texas — $300 para formar, $0 de impuesto si facturas hasta $2.65 millones</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $300 (Certificado de Formación).</li>
+            <li><strong>Cada año:</strong> no hay reporte anual al Secretario de Estado. Sí hay <strong>reporte de impuesto de franquicia + reporte de información pública, con vencimiento el 15 de mayo</strong>. Si tu facturación total es de <strong>$2.65 millones o menos (período 2026–27), el impuesto es $0</strong> — pero el reporte se presenta igual.</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en Texas.</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad. 2) Agente registrado en Texas. 3) Presenta el Certificado y paga los $300. 4) EIN gratis en el IRS. 5) Abre tu cuenta con el Comptroller para el reporte anual.</li>
+            <li><strong>Rapidez:</strong> el trámite estándar puede tardar hasta dos semanas; planifica con tiempo.</li>
+            <li><strong>Ojo:</strong> "$0 de impuesto" no significa "$0 de papeleo". Saltarte el reporte del 15 de mayo trae penalidades aunque no debas nada.</li>
+          </ul>
+          <h3>5. Nevada — $75 que en realidad son $425</h3>
+          <ul>
+            <li><strong>Formarla:</strong> los Artículos cuestan $75, pero el mismo día pagas también la <strong>Lista Inicial ($150)</strong> y la <strong>Licencia Comercial Estatal ($200)</strong>: <strong>$425 en total para empezar</strong>.</li>
+            <li><strong>Cada año:</strong> <strong>$350</strong> ($150 de la Lista Anual + $200 de la licencia), con vencimiento el <strong>último día de tu mes aniversario</strong>.</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en Nevada.</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad. 2) Agente registrado en Nevada. 3) Presenta Artículos + Lista Inicial + Licencia en el portal estatal y paga los $425. 4) EIN gratis en el IRS. 5) Revisa si tu ciudad o condado pide licencia local aparte.</li>
+            <li><strong>Rapidez:</strong> en línea suele resolverse en ~1 día hábil.</li>
+            <li><strong>Ojo:</strong> Nevada no tiene impuesto estatal sobre la renta, y eso se vende mucho. Pero en costo fijo anual ($350) es de los estados caros. El impuesto de comercio solo aplica si facturas más de $4 millones dentro de Nevada.</li>
+          </ul>
+          <h3>6. New Mexico — $50 para formar, $0 para siempre</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $50 (Artículos de Organización, solo en línea).</li>
+            <li><strong>Cada año:</strong> <strong>nada.</strong> New Mexico no pide reporte anual ni anualidad a las LLC.</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en New Mexico, con su declaración de aceptación firmada.</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad. 2) Agente registrado en New Mexico. 3) Presenta los Artículos en el portal estatal y paga los $50. 4) EIN gratis en el IRS. 5) Acuerdo operativo interno.</li>
+            <li><strong>Rapidez:</strong> en línea, 1–3 días hábiles.</li>
+            <li><strong>Ojo:</strong> los nombres de los dueños no aparecen en los Artículos — es de los estados más privados. Pero si vendes o trabajas dentro de New Mexico, el impuesto estatal sobre ventas/servicios (gross receipts) sí aplica. Barato de mantener no significa invisible para los impuestos.</li>
+          </ul>
+          <h3>7. Arizona — $50 para formar, $0 al año, con una condición</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $50 (Artículos de Organización ante la Comisión de Corporaciones de Arizona — aquí no es la Secretaría de Estado).</li>
+            <li><strong>Cada año:</strong> <strong>nada.</strong> Sin reporte anual.</li>
+            <li><strong>Agente registrado:</strong> se llama <em>agente estatutario</em>; obligatorio, con dirección física en Arizona.</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad. 2) Agente estatutario en Arizona. 3) Presenta los Artículos y paga los $50. 4) Cumple la publicación si te toca (ver abajo). 5) EIN gratis en el IRS.</li>
+            <li><strong>Rapidez:</strong> el trámite estándar corre unas dos semanas; el exprés (+$35) baja a unos días.</li>
+            <li><strong>Ojo — la publicación:</strong> dentro de los 60 días de formada, el aviso de tu LLC debe publicarse 3 veces en un periódico del condado de tu agente, y eso cuesta unos $30–$300 según el periódico. <strong>Excepción:</strong> si la dirección de tu agente está en el condado de <strong>Maricopa (Phoenix) o Pima (Tucson)</strong>, no publicas nada — la Comisión lo publica gratis en su base de datos. La mayoría de los agentes comerciales están en esos dos condados.</li>
+          </ul>
+          <h3>8. South Dakota — $150 para formar, $55 al año</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $150 en línea ($165 en papel).</li>
+            <li><strong>Cada año:</strong> reporte anual de <strong>$55 en línea</strong> ($70 en papel), con vencimiento el <strong>primer día de tu mes aniversario</strong>. Desde 2027 podrás escoger cambiar tu fecha límite al 31 de enero.</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en South Dakota (no apartados postales).</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad. 2) Agente registrado en South Dakota. 3) Presenta los Artículos en línea y paga los $150. 4) EIN gratis en el IRS. 5) Acuerdo operativo interno.</li>
+            <li><strong>Rapidez:</strong> en línea, aprobación en ~1 día hábil.</li>
+            <li><strong>Ojo:</strong> sin impuesto estatal sobre la renta, y trámite rápido — por eso aparece en esta lista. El papel cuesta $15 más en todo; hazlo en línea.</li>
+          </ul>
+          <h3>9. Colorado — $50 para formar, $25 al año</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $50 (Artículos de Organización, <strong>solo en línea</strong>).</li>
+            <li><strong>Cada año:</strong> <strong>Reporte Periódico de $25</strong>. Vence en tu mes de reporte periódico, y puedes presentarlo desde 2 meses antes hasta 2 meses después sin penalidad.</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en Colorado. Puedes ser tú mismo si vives allí.</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad. 2) Agente registrado en Colorado. 3) Presenta los Artículos en línea y paga los $50. 4) EIN gratis en el IRS. 5) Anota tu mes de reporte periódico.</li>
+            <li><strong>Rapidez:</strong> en línea se procesa en tiempo real — de los más rápidos del país.</li>
+            <li><strong>Ojo:</strong> el reporte subió de $10 a $25 en julio de 2024; las guías viejas todavía dicen $10. Si lo olvidas, la penalidad es $50 y tu LLC cae en estado de incumplimiento.</li>
+          </ul>
+          <h3>10. Kentucky — $40 para formar, $15 al año</h3>
+          <ul>
+            <li><strong>Formarla:</strong> $40 (Artículos de Organización) — la tarifa de formación más baja del país junto con Montana ($35).</li>
+            <li><strong>Cada año:</strong> reporte anual de <strong>$15</strong>, con vencimiento el <strong>30 de junio</strong>.</li>
+            <li><strong>Agente registrado:</strong> obligatorio, con dirección física en Kentucky.</li>
+            <li><strong>Pasos:</strong> 1) Nombre y disponibilidad. 2) Agente registrado en Kentucky. 3) Presenta los Artículos y paga los $40. 4) EIN gratis en el IRS. 5) Acuerdo operativo interno.</li>
+            <li><strong>Rapidez:</strong> normalmente 1–3 días hábiles.</li>
+            <li><strong>Ojo:</strong> barato de verdad, sin trucos escondidos en la tarifa estatal. Como en todo estado: si operas en otro lado, el otro lado también te va a pedir registro.</li>
+          </ul>
+          <h2>Preguntas frecuentes</h2>
+          <p><strong>¿Cuál es el estado más barato para tener una LLC?</strong></p>
+          <p>Para formarla, Montana ($35) y Kentucky ($40). Para mantenerla, Arizona, New Mexico y Missouri: $50 para formar y $0 al año, porque no piden reporte anual. La cuenta completa es formación + años de mantenimiento + tu agente registrado.</p>
+          <p><strong>¿Y el más caro?</strong></p>
+          <p>Massachusetts: $500 para formar y $500 cada año. En costo anual, California compite: su tarifa de formación es solo $70, pero cobra $800 al año de impuesto de franquicia aunque no vendas nada.</p>
+          <p><strong>¿Puedo formar en Wyoming y operar en New Jersey?</strong></p>
+          <p>Puedes, pero no te ahorra nada: New Jersey te exige registrar esa LLC como empresa extranjera ($100) y pagar su reporte anual ($75), encima de los $100 + $60 de Wyoming. Dos estados, dos pagos, dos reportes. Por eso la regla: forma donde operas.</p>
+          <p><strong>¿Cuánto cuesta el agente registrado?</strong></p>
+          <p>Si vives en el estado y puedes recibir documentos en horario laboral, puedes ser tu propio agente y cuesta $0. Un servicio comercial de agente registrado cuesta normalmente entre $35 y $300 al año, según el estado y lo que incluya.</p>
+          <p><strong>¿El EIN cuesta algo?</strong></p>
+          <p>No. El EIN es gratis, siempre, directo con el IRS. Si alguien te quiere cobrar por "sacar el EIN", te está cobrando por llenar un formulario gratuito.</p>
+          <h2>¿Tu estado no está en los 10?</h2>
+          <p>Déjalo en los comentarios del video y te respondo qué mirar antes de decidir — y si tienes alguna pregunta, escríbeme por correo a <a href="mailto:emma@emmamorganpartner.com">emma@emmamorganpartner.com</a> y revisamos tu caso. Sin ningún compromiso, miraré cómo te puedo ayudar.</p>
+        </div>
+        <div class="article-disclaimer" role="note">
+          <p><strong>Aviso importante:</strong> Este artículo es contenido educativo e información general. No es asesoría legal, fiscal, contable ni financiera, y leerlo no crea una relación abogado-cliente ni ninguna relación profesional. Emma Morgan no es un bufete de abogados, ni abogada, ni contadora pública (CPA), ni asesora fiscal. Las leyes, los requisitos, los costos y los plazos cambian y varían según el estado y el país: verifica siempre la información con las fuentes oficiales y consulta a un abogado o contador licenciado en tu jurisdicción antes de decidir o actuar con base en este contenido. Las fuentes y citas mencionadas son solo de referencia, no implican respaldo, y no garantizamos la exactitud del contenido de terceros. En la máxima medida permitida por la ley, Emma Morgan no asume responsabilidad por pérdidas o daños que surjan del uso de este artículo o de la confianza en su contenido; si alguna responsabilidad no pudiera excluirse, queda limitada al monto pagado por el servicio que dio origen al reclamo, y quedan excluidos los daños indirectos, consecuentes y punitivos. Los resultados nunca están garantizados.</p>
+        </div>
+        <div class="article-close">
+          <p>Sígueme — y si tienes alguna pregunta, escríbeme. Sin ningún compromiso, miraré cómo te puedo ayudar.</p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="mailto:emma@emmamorganpartner.com?subject=Tengo%20una%20pregunta%20%2F%20I%20have%20a%20question">Escríbeme</a>
+            <a class="btn btn-ghost" href="/#servicios">Ver los servicios</a>
+            <a class="btn btn-ghost" href="/#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- ARTICLES INDEX (ENGLISH) -->
     <div id="view-articles" hidden>
       <div class="wrap">
@@ -880,6 +1118,12 @@
             <p class="a-date">November 16, 2026</p>
             <h2>What Your Customers See When They Google Your Business — and What It's Costing You</h2>
             <p class="a-sum">You're already paying for your online problems — quietly, one lost customer at a time. The $99 Presence Audit finds them all, ranked by impact.</p>
+            <p class="a-read">Read the article →</p>
+          </a>
+          <a class="article-card" href="/articles/how-much-does-an-llc-cost-in-the-us.html">
+            <p class="a-date">November 17, 2026</p>
+            <h2>How Much Does an LLC Cost in the US? The 15 States Where Most Businesses Incorporate — and the 10 Most Convenient</h2>
+            <p class="a-sum">The 15 states where most LLCs are formed, in one table: the price to open an LLC and the price to keep it — plus the full detail on the 10 most convenient states.</p>
             <p class="a-read">Read the article →</p>
           </a>
         </div>
@@ -942,6 +1186,165 @@
       </div>
     </article>
 
+    <!-- ARTICLE 5 -->
+    <article id="view-articulo-5" class="article-page" hidden>
+      <div class="wrap article-inner">
+        <a class="back-link" href="/articles/">← All articles</a>
+        <p class="article-meta">Emma Morgan · November 17, 2026</p>
+        <h1>How Much Does an LLC Cost in the US? The 15 States Where Most Businesses Incorporate — and the 10 Most Convenient</h1>
+        <div class="direct-answer">
+          <p class="da-label">The short answer</p>
+          <p>Forming an LLC costs between $35 and $500 in state fees, and keeping it costs between $0 and $800 a year. Those are the two numbers that matter: the price to open it and the price to keep it.</p>
+        </div>
+        <div class="article-body">
+          <p>On this page you get the 15 states where most LLCs are formed in one table, plus the full detail on the 10 most convenient states to form yours.</p>
+          <p><strong>Information verified on November 17, 2026.</strong> State fees change — sometimes with little warning — so confirm the current amount on your state's official page before you file anything.</p>
+          <p>And the honest rule, up front: <strong>form your LLC where you operate.</strong> If you form in Wyoming but your business sits in New Jersey, you pay in both states: the Wyoming LLC plus a foreign registration in New Jersey. The Top 10 below is for people who genuinely get to choose — an online business with no office or employees in a fixed state. If you physically operate in a state, that state is usually your practical pick, even when it isn't the cheapest.</p>
+          <h2>The table: the 15 states where most LLCs are formed</h2>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th>State</th><th>To form</th><th>Each year (or period)</th><th>When it's due</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Arizona</td><td>$50</td><td>$0 — no annual report</td><td>—</td></tr>
+                <tr><td>California</td><td>$70</td><td>$800 (franchise tax) + $20 every 2 years</td><td>April 15; statement in anniversary month</td></tr>
+                <tr><td>Colorado</td><td>$50</td><td>$25 (periodic report)</td><td>Anniversary month (5-month window)</td></tr>
+                <tr><td>Delaware</td><td>$110</td><td>$400 (annual LLC tax)</td><td>Fixed date: June 1</td></tr>
+                <tr><td>Florida</td><td>$125</td><td>$138.75</td><td>Window: January 1 – May 1</td></tr>
+                <tr><td>Georgia</td><td>$100</td><td>$50 (annual registration)</td><td>Window: January 1 – April 1</td></tr>
+                <tr><td>Illinois</td><td>$150</td><td>$75</td><td>Before the anniversary month</td></tr>
+                <tr><td>Massachusetts</td><td>$500 ($520 online)</td><td>$500 ($520 online)</td><td>Anniversary date</td></tr>
+                <tr><td>Nevada</td><td>$75*</td><td>$350</td><td>Last day of anniversary month</td></tr>
+                <tr><td>New Jersey</td><td>$100</td><td>$75</td><td>Last day of anniversary month</td></tr>
+                <tr><td>New York</td><td>$200</td><td>$9 every 2 years + publication</td><td>Last day of anniversary month + publication</td></tr>
+                <tr><td>North Carolina</td><td>$125</td><td>$200</td><td>Fixed date: April 15</td></tr>
+                <tr><td>Pennsylvania</td><td>$125</td><td>$7</td><td>Window: January 1 – September 30</td></tr>
+                <tr><td>Texas</td><td>$300</td><td>$0 if revenue is up to $2.65M (report still required)</td><td>Fixed date: May 15</td></tr>
+                <tr><td>Wyoming</td><td>$100</td><td>$60 min.</td><td>First day of anniversary month</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>* Nevada: the $75 is the Articles alone. On day one you pay $425 total (see the detail below).</p>
+          <h2>The 10 most convenient states — the full detail</h2>
+          <h3>1. Wyoming — $100 to form, $60 a year</h3>
+          <ul>
+            <li><strong>To form:</strong> $100 (Articles of Organization, filed online).</li>
+            <li><strong>Each year:</strong> annual report with a license tax of <strong>$60 minimum</strong> (or 0.0002 of the value of your assets located in Wyoming, whichever is higher). Due the <strong>first day of your anniversary month</strong>.</li>
+            <li><strong>Registered agent:</strong> required, with a physical Wyoming street address. It can be a commercial agent company; your name as owner does not appear on the Articles.</li>
+            <li><strong>Steps:</strong> 1) Pick the name and check it's available. 2) Name your Wyoming registered agent. 3) File the Articles online and pay the $100. 4) Get your EIN free from the IRS. 5) Make your operating agreement (not filed with the state, but have one).</li>
+            <li><strong>Speed:</strong> online filings usually approve in 1–3 business days.</li>
+            <li><strong>Watch out:</strong> Wyoming has no state income tax, but that doesn't move the taxes of the state where you live or operate. And the annual report is owed even if you sell nothing.</li>
+          </ul>
+          <h3>2. Delaware — $110 to form, a flat $400 a year</h3>
+          <ul>
+            <li><strong>To form:</strong> $110 (Certificate of Formation).</li>
+            <li><strong>Each year:</strong> a <strong>flat $400 annual LLC tax</strong>, whether you earn anything or not. Due <strong>June 1</strong>. There is no annual report. (It rose from $300 to $400 starting with the 2026 tax year — many guides still show the old number.)</li>
+            <li><strong>Registered agent:</strong> required, with a physical Delaware address.</li>
+            <li><strong>Steps:</strong> 1) Name and availability. 2) Delaware registered agent. 3) File the Certificate of Formation and pay the $110. 4) EIN free from the IRS. 5) Internal operating agreement.</li>
+            <li><strong>Speed:</strong> among the fastest; same-day service exists for an extra fee.</li>
+            <li><strong>Watch out:</strong> paying the tax late costs a $200 penalty plus 1.5% monthly interest. And Delaware's fame comes from large corporations and investors — for a small business operating in another state, you usually pay Delaware <strong>plus</strong> your state.</li>
+          </ul>
+          <h3>3. Florida — $125 to form, $138.75 a year</h3>
+          <ul>
+            <li><strong>To form:</strong> $125 ($100 for the Articles + $25 for the registered agent designation).</li>
+            <li><strong>Each year:</strong> an annual report of <strong>$138.75</strong>, filed between <strong>January 1 and May 1</strong>.</li>
+            <li><strong>Registered agent:</strong> required, with a physical Florida address. You can be your own agent if you live in Florida.</li>
+            <li><strong>Steps:</strong> 1) Name and availability on Sunbiz. 2) Set your registered agent. 3) File the Articles online and pay the $125. 4) EIN free from the IRS. 5) Internal operating agreement.</li>
+            <li><strong>Speed:</strong> online, about 2–3 business days.</li>
+            <li><strong>Watch out:</strong> a late report costs <strong>$400 extra</strong> — the total jumps to $538.75. Put the date on your calendar the day you form.</li>
+          </ul>
+          <h3>4. Texas — $300 to form, $0 tax if your revenue is up to $2.65 million</h3>
+          <ul>
+            <li><strong>To form:</strong> $300 (Certificate of Formation).</li>
+            <li><strong>Each year:</strong> no annual report to the Secretary of State. There <strong>is</strong> a franchise tax report plus a Public Information Report, <strong>due May 15</strong>. If your total revenue is <strong>$2.65 million or less (2026–27 period), the tax is $0</strong> — but the report is still filed.</li>
+            <li><strong>Registered agent:</strong> required, with a physical Texas address.</li>
+            <li><strong>Steps:</strong> 1) Name and availability. 2) Texas registered agent. 3) File the Certificate and pay the $300. 4) EIN free from the IRS. 5) Set up your Comptroller account for the yearly report.</li>
+            <li><strong>Speed:</strong> standard processing can run up to two weeks; plan ahead.</li>
+            <li><strong>Watch out:</strong> "$0 tax" does not mean "$0 paperwork." Skipping the May 15 report brings penalties even when you owe nothing.</li>
+          </ul>
+          <h3>5. Nevada — the $75 that is really $425</h3>
+          <ul>
+            <li><strong>To form:</strong> the Articles cost $75, but the same day you also pay the <strong>Initial List ($150)</strong> and the <strong>State Business License ($200)</strong>: <strong>$425 total to start</strong>.</li>
+            <li><strong>Each year:</strong> <strong>$350</strong> ($150 Annual List + $200 license), due the <strong>last day of your anniversary month</strong>.</li>
+            <li><strong>Registered agent:</strong> required, with a physical Nevada address.</li>
+            <li><strong>Steps:</strong> 1) Name and availability. 2) Nevada registered agent. 3) File Articles + Initial List + License through the state portal and pay the $425. 4) EIN free from the IRS. 5) Check whether your city or county wants a separate local license.</li>
+            <li><strong>Speed:</strong> online filings usually resolve in about 1 business day.</li>
+            <li><strong>Watch out:</strong> Nevada has no state income tax, and that gets marketed hard. But at $350 a year in fixed state cost, it is one of the expensive states to keep. The Commerce Tax only applies above $4 million of Nevada revenue.</li>
+          </ul>
+          <h3>6. New Mexico — $50 to form, $0 forever</h3>
+          <ul>
+            <li><strong>To form:</strong> $50 (Articles of Organization, online only).</li>
+            <li><strong>Each year:</strong> <strong>nothing.</strong> New Mexico requires no annual report and charges LLCs no annual fee.</li>
+            <li><strong>Registered agent:</strong> required, with a physical New Mexico address and a signed statement of acceptance.</li>
+            <li><strong>Steps:</strong> 1) Name and availability. 2) New Mexico registered agent. 3) File the Articles in the state portal and pay the $50. 4) EIN free from the IRS. 5) Internal operating agreement.</li>
+            <li><strong>Speed:</strong> online, 1–3 business days.</li>
+            <li><strong>Watch out:</strong> owner names don't appear on the Articles — it's one of the most private states. But if you sell or work inside New Mexico, the state gross receipts tax still applies. Cheap to keep does not mean invisible to taxes.</li>
+          </ul>
+          <h3>7. Arizona — $50 to form, $0 a year, with one condition</h3>
+          <ul>
+            <li><strong>To form:</strong> $50 (Articles of Organization with the Arizona Corporation Commission — here it is not the Secretary of State).</li>
+            <li><strong>Each year:</strong> <strong>nothing.</strong> No annual report.</li>
+            <li><strong>Registered agent:</strong> called a <em>statutory agent</em>; required, with a physical Arizona address.</li>
+            <li><strong>Steps:</strong> 1) Name and availability. 2) Statutory agent in Arizona. 3) File the Articles and pay the $50. 4) Handle publication if it applies to you (below). 5) EIN free from the IRS.</li>
+            <li><strong>Speed:</strong> standard processing runs about two weeks; expedited (+$35) brings it down to a few days.</li>
+            <li><strong>Watch out — publication:</strong> within 60 days of formation, a notice of your LLC must run 3 times in a newspaper in your agent's county, costing roughly $30–$300 depending on the paper. <strong>Exception:</strong> if your agent's address is in <strong>Maricopa County (Phoenix) or Pima County (Tucson)</strong>, you publish nothing — the Commission posts it to its database for free. Most commercial agents sit in those two counties.</li>
+          </ul>
+          <h3>8. South Dakota — $150 to form, $55 a year</h3>
+          <ul>
+            <li><strong>To form:</strong> $150 online ($165 on paper).</li>
+            <li><strong>Each year:</strong> an annual report of <strong>$55 online</strong> ($70 on paper), due the <strong>first day of your anniversary month</strong>. Starting in 2027 you can elect to move your deadline to January 31 instead.</li>
+            <li><strong>Registered agent:</strong> required, with a physical South Dakota street address (no P.O. boxes).</li>
+            <li><strong>Steps:</strong> 1) Name and availability. 2) South Dakota registered agent. 3) File the Articles online and pay the $150. 4) EIN free from the IRS. 5) Internal operating agreement.</li>
+            <li><strong>Speed:</strong> online, approval in about 1 business day.</li>
+            <li><strong>Watch out:</strong> no state income tax and fast processing — that's why it's on this list. Paper costs $15 more on everything; file online.</li>
+          </ul>
+          <h3>9. Colorado — $50 to form, $25 a year</h3>
+          <ul>
+            <li><strong>To form:</strong> $50 (Articles of Organization, <strong>online only</strong>).</li>
+            <li><strong>Each year:</strong> a <strong>$25 Periodic Report</strong>. It is due in your periodic report month, and you can file from 2 months before to 2 months after with no penalty.</li>
+            <li><strong>Registered agent:</strong> required, with a physical Colorado address. You can be your own if you live there.</li>
+            <li><strong>Steps:</strong> 1) Name and availability. 2) Colorado registered agent. 3) File the Articles online and pay the $50. 4) EIN free from the IRS. 5) Note your periodic report month.</li>
+            <li><strong>Speed:</strong> online filings process in real time — among the fastest in the country.</li>
+            <li><strong>Watch out:</strong> the report fee rose from $10 to $25 in July 2024; older guides still say $10. Forget it and the penalty is $50, and your LLC falls into noncompliant status.</li>
+          </ul>
+          <h3>10. Kentucky — $40 to form, $15 a year</h3>
+          <ul>
+            <li><strong>To form:</strong> $40 (Articles of Organization) — the lowest formation fee in the country alongside Montana ($35).</li>
+            <li><strong>Each year:</strong> an annual report of <strong>$15</strong>, due <strong>June 30</strong>.</li>
+            <li><strong>Registered agent:</strong> required, with a physical Kentucky address.</li>
+            <li><strong>Steps:</strong> 1) Name and availability. 2) Kentucky registered agent. 3) File the Articles and pay the $40. 4) EIN free from the IRS. 5) Internal operating agreement.</li>
+            <li><strong>Speed:</strong> usually 1–3 business days.</li>
+            <li><strong>Watch out:</strong> genuinely cheap, with no tricks hidden in the state fee. As everywhere: if you operate somewhere else, that state will want its registration too.</li>
+          </ul>
+          <h2>Frequently asked questions</h2>
+          <p><strong>What is the cheapest state to have an LLC in?</strong></p>
+          <p>To form one, Montana ($35) and Kentucky ($40). To keep one, Arizona, New Mexico, and Missouri: $50 to form and $0 a year, because they require no annual report. The full math is formation + years of upkeep + your registered agent.</p>
+          <p><strong>And the most expensive?</strong></p>
+          <p>Massachusetts: $500 to form and $500 every year. On yearly cost, California competes: its formation fee is only $70, but it charges $800 a year in franchise tax even if you sell nothing.</p>
+          <p><strong>Can I form in Wyoming and operate in New Jersey?</strong></p>
+          <p>You can, but it saves you nothing: New Jersey requires you to register that LLC as a foreign business ($100) and pay its annual report ($75), on top of Wyoming's $100 + $60. Two states, two payments, two reports. That's the rule: form where you operate.</p>
+          <p><strong>How much does a registered agent cost?</strong></p>
+          <p>If you live in the state and can receive documents during business hours, you can be your own agent and it costs $0. A commercial registered agent service typically runs $35–$300 a year, depending on the state and what's included.</p>
+          <p><strong>Does the EIN cost anything?</strong></p>
+          <p>No. The EIN is free, always, directly from the IRS. If someone wants to charge you to "get your EIN," they're charging you to fill out a free form.</p>
+          <h2>Your state isn't in the Top 10?</h2>
+          <p>Leave it in the comments on the video and I'll answer with what to look at before you decide — and if you have any question, email me at <a href="mailto:emma@emmamorganpartner.com">emma@emmamorganpartner.com</a> and we'll look at your case. No commitment at all; I'll look at how I can help you.</p>
+        </div>
+        <div class="article-disclaimer" role="note">
+          <p><strong>Important notice:</strong> This article is educational content and general information. It is not legal, tax, accounting, or financial advice, and reading it creates no attorney-client or other professional relationship. Emma Morgan is not a law firm, an attorney, a CPA, or a tax advisor. Laws, requirements, fees, and deadlines change and vary by state and country: always verify information against official sources and consult a licensed attorney or accountant in your jurisdiction before deciding or acting on this content. Sources and citations mentioned are for reference only, imply no endorsement, and we do not guarantee the accuracy of third-party content. To the fullest extent permitted by law, Emma Morgan assumes no liability for losses or damages arising from the use of this article or reliance on its content; if any liability cannot be excluded, it is limited to the amount paid for the service that gave rise to the claim, and indirect, consequential, and punitive damages are excluded. Results are never guaranteed.</p>
+        </div>
+        <div class="article-close">
+          <p>Follow me — and if you have any question, write to me. No commitment at all; I'll look at how I can help you.</p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="mailto:emma@emmamorganpartner.com?subject=Tengo%20una%20pregunta%20%2F%20I%20have%20a%20question">Write to me</a>
+            <a class="btn btn-ghost" href="/#servicios">See the services</a>
+            <a class="btn btn-ghost" href="/#contacto">Contact</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <footer>
       <div class="wrap">
         <p>© 2026 Emma Morgan · Boston, MA</p>
@@ -987,7 +1390,9 @@
           a1: document.getElementById("view-articulo-1"),
           a2: document.getElementById("view-articulo-2"),
           articles: document.getElementById("view-articles"),
-          a3: document.getElementById("view-articulo-3")
+          a3: document.getElementById("view-articulo-3"),
+          a4: document.getElementById("view-articulo-4"),
+          a5: document.getElementById("view-articulo-5")
         };
         var baseTitle = document.title;
         var titles = {
@@ -996,7 +1401,9 @@
           a1: "¿Cómo abrir una LLC sin seguro social? | Emma Morgan",
           a2: "¿Una LLC paga 0% impuestos? | Emma Morgan",
           articles: "Articles — Clear answers to start and grow your business | Emma Morgan",
-          a3: "What Your Customers See When They Google Your Business — and What It's Costing You | Emma Morgan"
+          a3: "What Your Customers See When They Google Your Business — and What It's Costing You | Emma Morgan",
+          a4: "¿Cuánto cuesta una LLC en USA? Los 15 estados donde más empresas se forman — y los 10 más convenientes | Emma Morgan",
+          a5: "How Much Does an LLC Cost in the US? The 15 States Where Most Businesses Incorporate — and the 10 Most Convenient | Emma Morgan"
         };
         function route() {
           var hash = location.hash || "";
@@ -1006,12 +1413,16 @@
           else if (hash === "#/articulos/llc-cero-impuestos") key = "a2";
           else if (hash === "#/articles") key = "articles";
           else if (hash === "#/articles/what-customers-see-when-they-google-your-business") key = "a3";
+          else if (hash === "#/articulos/cuanto-cuesta-una-llc-en-usa") key = "a4";
+          else if (hash === "#/articles/how-much-does-an-llc-cost-in-the-us") key = "a5";
           home.hidden = key !== "home";
           views.articulos.hidden = key !== "articulos";
           views.a1.hidden = key !== "a1";
           views.a2.hidden = key !== "a2";
           views.articles.hidden = key !== "articles";
           views.a3.hidden = key !== "a3";
+          views.a4.hidden = key !== "a4";
+          views.a5.hidden = key !== "a5";
           document.title = titles[key];
           if (key !== "home") {
             window.scrollTo(0, 0);
