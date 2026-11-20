@@ -325,6 +325,9 @@
         .articles-head { padding-top: 34px; }
         .article-page { padding-top: 30px; }
       }
+      .lang-toggle a { border: 0; background: transparent; color: var(--ink); padding: 5px 8px; min-height: 34px; display: inline-flex; align-items: center; }
+      .lang-toggle a svg { display: block; width: 22px; height: 16px; }
+      .lang-toggle a[aria-current="true"] { background: var(--ink); color: var(--bg); }
     </style>
     <script type="application/ld+json">
 {
@@ -368,7 +371,8 @@
           <a href="/articles/" id="nav-articles" ">Articles</a>
           <a href="/#contacto" ">Contact</a>
         </nav>
-        </div>
+        <div class="lang-toggle" role="group" aria-label="Language / Idioma / Língua"><a href="/articles/what-customers-see-when-they-google-your-business.html" aria-current="true" aria-label="English" title="English"><svg viewBox="0 0 26 19" width="26" height="19" aria-hidden="true" focusable="false"><clipPath id="fus"><rect width="26" height="19" rx="2.5"/></clipPath><g clip-path="url(#fus)"><rect width="26" height="19" fill="#ffffff"/><g fill="#b22234"><rect width="26" height="1.47"/><rect y="2.92" width="26" height="1.47"/><rect y="5.85" width="26" height="1.47"/><rect y="8.77" width="26" height="1.47"/><rect y="11.69" width="26" height="1.47"/><rect y="14.62" width="26" height="1.47"/><rect y="17.54" width="26" height="1.47"/></g><rect width="12" height="10.23" fill="#3c3b6e"/><g fill="#ffffff"><circle cx="2" cy="2.1" r=".62"/><circle cx="5" cy="2.1" r=".62"/><circle cx="8" cy="2.1" r=".62"/><circle cx="11" cy="2.1" r=".62"/><circle cx="2" cy="5" r=".62"/><circle cx="5" cy="5" r=".62"/><circle cx="8" cy="5" r=".62"/><circle cx="11" cy="5" r=".62"/><circle cx="2" cy="7.9" r=".62"/><circle cx="5" cy="7.9" r=".62"/><circle cx="8" cy="7.9" r=".62"/><circle cx="11" cy="7.9" r=".62"/></g></g></svg></a><a href="/articulos/" aria-label="Español" title="Español"><svg viewBox="0 0 26 19" width="26" height="19" aria-hidden="true" focusable="false"><clipPath id="fes"><rect width="26" height="19" rx="2.5"/></clipPath><g clip-path="url(#fes)"><rect width="26" height="19" fill="#F1BF00"/><rect width="26" height="4.75" fill="#AA151B"/><rect y="14.25" width="26" height="4.75" fill="#AA151B"/><g><rect x="5.8" y="6.8" width="3.6" height="5.4" rx="0.7" fill="#AA151B" stroke="#ffffff" stroke-width="0.35"/><rect x="6.45" y="7.55" width="2.3" height="1.65" fill="#F1BF00"/><rect x="7.15" y="9.55" width="0.9" height="1.65" fill="#ffffff" opacity="0.9"/></g></g></svg></a><a href="/" aria-label="Português" title="Português"><svg viewBox="0 0 26 19" width="26" height="19" aria-hidden="true" focusable="false"><clipPath id="fbr"><rect width="26" height="19" rx="2.5"/></clipPath><clipPath id="fbrc"><circle cx="13" cy="9.5" r="3.5"/></clipPath><g clip-path="url(#fbr)"><rect width="26" height="19" fill="#009c3b"/><polygon points="13,2.4 23.6,9.5 13,16.6 2.4,9.5" fill="#ffdf00"/><circle cx="13" cy="9.5" r="3.5" fill="#002776"/><g clip-path="url(#fbrc)"><rect x="8.6" y="10" width="8.8" height="1.05" fill="#ffffff" transform="rotate(-16 13 9.5)"/><circle cx="11.3" cy="7.4" r=".45" fill="#ffffff"/><circle cx="14.7" cy="8" r=".38" fill="#ffffff"/><circle cx="12.9" cy="12.4" r=".4" fill="#ffffff"/></g></g></svg></a></div>
+      </div>
     </header>
     <main id="top">
 <article id="view-articulo-3" class="article-page">
